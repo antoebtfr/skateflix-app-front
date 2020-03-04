@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   public links: Link[] = [
-    { name: 'Profil', redirectTo: '' },
+    { name: 'Connexion', redirectTo: '' },
     { name: 'Mes abonnements', redirectTo: '' },
     { name: 'Poster', redirectTo: '' },
     { name: 'Exploration', redirectTo: '' }
