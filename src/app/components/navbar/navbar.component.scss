@@ -1,0 +1,30 @@
+#nav-body{
+  background-color: transparent;
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.8s;
+}
+
+ul{
+  height:100%;
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 17px;
+  font-family: 'Spartan', sans-serif;
+}
+
+ul li{
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+ul li:hover{
+  text-shadow: 0px 0px 10px white;
+}
