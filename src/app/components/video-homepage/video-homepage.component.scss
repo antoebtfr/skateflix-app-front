@@ -1,0 +1,21 @@
+#video-body{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color:red;
+  }
+  
+  #dont-pause{
+    width:100vw;
+    height:100vh;
+    background-color: transparent;
+    position: absolute;
+  }
+  
+  iframe{
+    width:130%;
+    height: 130%;
+  }

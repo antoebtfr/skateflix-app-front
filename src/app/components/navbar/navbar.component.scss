@@ -9,11 +9,11 @@
   transition: 0.8s;
   position: fixed;
   z-index: 10;
+  overflow-x: hidden;
 }
 
 ul{
   height:100%;
-  width: 40%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -25,6 +25,10 @@ ul{
 ul li{
   cursor: pointer;
   transition: 0.8s;
+  height: 100%;
+  margin-right: 3vw;
+  display: flex;
+  align-items: center;
 }
 
 ul li:hover{
