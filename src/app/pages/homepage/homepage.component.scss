@@ -4,10 +4,6 @@ width: 100vw;
 background-color: red;
 }
 
-app-navbar{
-  z-index: 10;
-}
-
 #video{
   width:100vw;
   height: 100vh;
@@ -17,8 +13,11 @@ app-navbar{
   overflow: hidden;
 }
 
-.e{
-  z-index: 1000;
+#dont-pause{
+  width:100vw;
+  height:100vh;
+  background-color: transparent;
+  position: absolute;
 }
 
 iframe{
