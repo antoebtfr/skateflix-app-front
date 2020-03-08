@@ -3,3 +3,29 @@ height: 100vh;
 width: 100vw;
 background-color: red;
 }
+
+app-log-sidebar{
+    z-index: 100;
+    position: fixed;
+    right: -30vw;
+    transition: 0.8s;
+}
+
+app-log-sidebar.isOpen{
+    right: 0;  
+}
+
+#div-to-close{
+    background-color: rgba(54, 54, 54, 0.589);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99;
+    left:100vw;
+    top: 0;
+    transition: 0.3s;
+}
+
+#div-to-close.isOpen{
+    left: 0;
+}

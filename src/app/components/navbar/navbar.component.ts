@@ -1,5 +1,6 @@
 import { Link } from './../../shared/class/link';
 import { Component, OnInit } from '@angular/core';
+import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  public links: Link[] = [
-    { name: 'Connexion', redirectTo: '' },
-    { name: 'Mes abonnements', redirectTo: '' },
-    { name: 'Poster', redirectTo: '' },
-    { name: 'Exploration', redirectTo: '' }
-  ];
-  constructor() {}
+  // public links: Link[] = [
+  //   { name: 'Connexion', redirectTo: '', activate: this.test() },
+  //   { name: 'Mes abonnements', redirectTo: '' },
+  //   { name: 'Poster', redirectTo: '' },
+  //   { name: 'Exploration', redirectTo: '' }
+  // ];
+  constructor(private varglo: VariablesGlobales) {}
 
   ngOnInit() {
     this.afterScroll();
@@ -27,5 +28,9 @@ export class NavbarComponent implements OnInit {
         ? (navbarCSS.backgroundColor = '#191919')
         : (navbarCSS.backgroundColor = 'transparent');
     });
+  }
+
+  public openSidebar() {
+    this.varglo.openSidebar();
   }
 }

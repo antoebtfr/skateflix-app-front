@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
 
 @Component({
   selector: 'app-connection-form',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnectionFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private varglo: VariablesGlobales) { }
 
   ngOnInit() {
+  }
+
+  public switch() {
+    this.varglo.switchToInscription();
   }
 
 }

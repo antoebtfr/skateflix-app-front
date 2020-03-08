@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
 
 @Component({
   selector: 'app-log-sidebar',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogSidebarComponent implements OnInit {
 
-  public connectionFormOpen = true;
-  constructor() { }
+  constructor(private varglo: VariablesGlobales) { }
 
   ngOnInit() {
+    this.status();
+  }
+
+  public status() {
+    return this.varglo.getConnectionModalStatus();
   }
 
 }

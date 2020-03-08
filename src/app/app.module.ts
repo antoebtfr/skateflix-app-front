@@ -11,6 +11,7 @@ import { WeeklyTopComponent } from './components/weekly-top/weekly-top.component
 import { LogSidebarComponent } from './components/log-sidebar/log-sidebar.component';
 import { ConnectionFormComponent } from './components/connection-form/connection-form.component';
 import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
+import { VariablesGlobales } from './variable-globale/variable-global';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { InscriptionFormComponent } from './components/inscription-form/inscript
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [VariablesGlobales],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

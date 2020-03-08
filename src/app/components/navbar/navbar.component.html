@@ -5,6 +5,9 @@
     border="0"
   />
   <ul>
-    <li *ngFor="let link of links">{{link.name}}</li>
+    <li (click)="openSidebar()">Connexion</li>
+    <li>Mes abonnements</li>
+    <li>Poster</li>
+    <li>Exploration</li>
   </ul>
 </section>

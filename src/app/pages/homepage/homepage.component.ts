@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
 
 @Component({
   selector: 'app-homepage',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private varglo: VariablesGlobales) { }
 
   ngOnInit() {
+    this.sidebarStatus();
+  }
+
+  public sidebarStatus() {
+    return this.varglo.getSidebarStatus();
+  }
+
+  public closeSidebar() {
+    this.varglo.closeSidebar();
   }
 
 }

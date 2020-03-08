@@ -1,6 +1,6 @@
 <section id="logs-body">
     <div class="container">
-        <app-connection-form class="form-container" [ngClass]="connectionFormOpen ? 'isOpen' : '' "></app-connection-form>
-        <app-inscription-form class="form-container" [ngClass]="connectionFormOpen ? '' : 'isOpen' "></app-inscription-form>
+        <app-connection-form class="form-container" [ngClass]="status() ? 'isOpen' : '' "></app-connection-form>
+        <app-inscription-form class="form-container" [ngClass]="status() ? '' : 'isOpen' "></app-inscription-form>
     </div>
 </section>
