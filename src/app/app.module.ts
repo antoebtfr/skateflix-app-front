@@ -8,6 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VideoHomepageComponent } from './components/video-homepage/video-homepage.component';
 import { WeeklyTopComponent } from './components/weekly-top/weekly-top.component';
+import { LogSidebarComponent } from './components/log-sidebar/log-sidebar.component';
+import { ConnectionFormComponent } from './components/connection-form/connection-form.component';
+import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { WeeklyTopComponent } from './components/weekly-top/weekly-top.component
     NavbarComponent,
     FooterComponent,
     VideoHomepageComponent,
-    WeeklyTopComponent
+    WeeklyTopComponent,
+    LogSidebarComponent,
+    ConnectionFormComponent,
+    InscriptionFormComponent
   ],
   imports: [
     BrowserModule,

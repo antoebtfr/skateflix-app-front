@@ -1,0 +1,45 @@
+h2{
+    font-size: 6vh;
+}
+
+form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+input, h2, p{
+    width: 100%;
+}
+
+input{
+    height: 3vh;
+    border-radius: 5px;
+    border: solid 2px black;
+    padding-left: 5px;
+}
+
+h2, input, button {
+    margin-bottom: 3vh;
+}
+
+#connection-btn{
+    color: white;
+    border-radius: 15px;
+    background-color: transparent;
+    border: solid white 2px;
+    padding: 5px 15px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+#connection-btn:hover{
+    background-color: green;
+    border: solid rgb(33, 68, 24) 2px;
+}
+
+span{
+    color: rgb(20, 112, 128);
+    text-decoration: underline;
+    cursor: pointer;
+}
