@@ -23,7 +23,7 @@ h2, input, button {
     margin-bottom: 3vh;
 }
 
-#connection-btn{
+button{
     color: white;
     border-radius: 15px;
     background-color: transparent;
@@ -33,9 +33,9 @@ h2, input, button {
     cursor: pointer;
 }
 
-#connection-btn:hover{
-    background-color: green;
-    border: solid rgb(33, 68, 24) 2px;
+button:hover{
+    background-color: white;
+    color: rgb(46, 46, 46);
 }
 
 span{
@@ -58,4 +58,16 @@ label{
 
 #firstname-inscription, #surname-inscription{
     width: 45%;
+}
+
+.conditions-container{
+    width: 80%;
+    display: flex;
+    font-size: 0.8em;
+    align-items: center;
+}
+
+#cgu-checkbox{
+    width:20%;
+    background-color: red;
 }

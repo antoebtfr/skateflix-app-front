@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class VariablesGlobales {
-    private connectionModal = true;
-    private sidebar = false;
+    private connectionModal = false; // true = Connection Modal - false = Inscriptio Modal
+    private sidebar = false; // true = Sidebar open - false = Sidebar close
 
     public getConnectionModalStatus() {
         return this.connectionModal;
@@ -20,7 +20,7 @@ export class VariablesGlobales {
         return this.sidebar;
     }
 
-    public openSidebar(){
+    public openSidebar() {
         this.sidebar = true;
     }
 
