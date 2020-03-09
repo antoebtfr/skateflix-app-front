@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 @Injectable()
 export class VariablesGlobales {
-    private connectionModal = false; // true = Connection Modal - false = Inscriptio Modal
+    private connectionModal = true; // true = Connection Modal - false = Inscriptio Modal
     private sidebar = false; // true = Sidebar open - false = Sidebar close
 
     public getConnectionModalStatus() {

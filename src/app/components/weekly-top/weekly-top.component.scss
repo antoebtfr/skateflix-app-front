@@ -7,8 +7,8 @@
 
 h2{ 
     margin-left: 2.5vw;
-    font-size: 2.5vw;
-    margin-bottom: 2vh;
+    font-size: 2.7vw;
+    margin-bottom: 5vh;
 }
 
 .video-container{
@@ -19,13 +19,16 @@ h2{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-
+    padding-bottom: 2vh;
 }
 
 .weekly-video{
     min-width: 17vw;
     height: 15vh;
-    background-color: #fff;
+    background-color: rgb(31, 31, 31);
+    border:rgb(14, 14, 14) solid 5px;
+    border-radius: 4px;
+    padding: 3px;
     margin: 0 20px;
     color: black;
     display: inline-block;
