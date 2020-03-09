@@ -1,9 +1,15 @@
 <section id="connection-form-body">
-    <form>
+    <form [formGroup]="connectionForm">
         <h2> Connexion </h2>
-        <input type="email" id="email-connection" name="email-connection" placeholder="example@example.com">
-        <input type="password" id="connection-password" name="connection-password" placeholder="password">
-        <button type="submit" id="connection-btn">Connexion</button>
+        <input type="email" id="email-connection" name="email-connection" placeholder="example@example.com"
+            formControlName="email">
+        <div class="errors-messages-container">
+            <p *ngIf='connectionForm.controls.email.invalid && submitted'> Veuillez saisir votre email de connexion </p>
+        </div>
+        <input type="password" id="connection-password" name="connection-password" placeholder="password"
+            formControlName="password">
+        <button type="submit" id="connection-btn" (click)="sendUser()"
+            [disabled]="connectionForm.pristine">Connexion</button>
     </form>
     <p>Pas encore inscrit? Inscris-toi en cliquant <span (click)="switch()">ici</span></p>
 

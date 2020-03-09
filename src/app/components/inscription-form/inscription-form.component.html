@@ -1,25 +1,31 @@
 <section id="inscription-form-body">
-    <form>
+    <form [formGroup]="inscriptionForm">
         <h2> Inscription </h2>
-        <label> Prénom et Nom </label> 
-        
+        <label> Prénom et Nom </label>
+
         <div id="name-inscription-container">
-        <input type="text" id="firstname-inscription" name="firstname-inscription" placeholder="Ninja">
-        <input type="text" id="surname-inscription" name="surname-inscription" placeholder="Youston">
-    </div>
+            <input class="text-input" type="text" id="firstname-inscription" name="firstname-inscription"
+                placeholder="Ninja" formControlName="firstname">
+            <input class="text-input" type="text" id="surname-inscription" name="surname-inscription"
+                placeholder="Youston" formControlName="surname">
+        </div>
 
         <label> Email </label>
-        <input type="email" id="email-inscription" name="email-inscription" placeholder="NineClub@example.com">
+        <input class="text-input" type="email" id="email-inscription" name="email-inscription"
+            placeholder="NineClub@example.com" formControlName="email">
 
         <label> Mot de passe </label>
-        <input type="password" id="inscription-password" name="inscription-password" placeholder="password">
+        <input class="text-input" type="password" id="inscription-password" name="inscription-password"
+            placeholder="password" formControlName="password">
 
         <div class="conditions-container">
-            <input type="checkbox" id="cgu-checkbox" name="cgu-checkbox" required>
+            <input type="checkbox" id="cgu-checkbox" name="cgu-checkbox" formControlName="CGU">
             <label for="cgu-checkbox" class="conditions" id="cgu-checkbox-label"> J'accepte les CGU </label>
         </div>
-        
-        <button type="submit" id="inscription-btn">Inscription</button>
+
+        <button type="submit" id="inscription-btn" (click)="showUser()" [disabled]="!inscriptionForm.valid"
+            [ngClass]="inscriptionForm.valid ? 'valid' : 'invalid' ">Inscription</button>
     </form>
     <p>Déja inscrit? Connecte-toi en cliquant <span (click)="switch()">ici</span></p>
+    <!-- NEEDFIX : Precision -->
 </section>

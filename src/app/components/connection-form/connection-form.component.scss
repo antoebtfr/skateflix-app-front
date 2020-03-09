@@ -43,3 +43,12 @@ span{
     text-decoration: underline;
     cursor: pointer;
 }
+
+.errors-messages-container{
+    color: red;
+    font-size: 1em;
+}
+
+.errors-messages-container p{
+    margin-bottom: 2vh;
+}

@@ -71,3 +71,19 @@ label{
     width:20%;
     background-color: red;
 }
+
+.text-input.ng-invalid.ng-touched{
+    border: red solid 2px;
+}
+
+button.invalid{
+    opacity: 0.5;
+}
+
+button.invalid:hover{
+    color: white;
+    border-radius: 15px;
+    background-color: transparent;
+    border: solid white 2px;
+    cursor: inherit;
+}
