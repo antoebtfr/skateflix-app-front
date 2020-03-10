@@ -1,0 +1,50 @@
+#body-404{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+}
+
+div {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-flow: column wrap;
+    padding-top: 15vh;
+}
+
+div h2{
+    font-size: 25em;
+}
+
+div p{
+    font-size: 4em;
+}
+
+#triangle-code{
+    height: 10vw;
+    width: 10vw;
+    background-color: red;
+    position: fixed;
+    z-index: 50;
+    left: -5vw;
+    bottom: -5vw;
+    padding-top: 0;
+    transform: rotateZ(45deg);
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+#triangle-code:hover{
+    height: 30vw;
+    width: 30vw;
+    left: -15vw;
+    bottom: -15vw;
+    padding-top: 0;
+}
+
+#triangle-code:hover p{
+    font-size: 3em;
+
+}

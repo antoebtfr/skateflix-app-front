@@ -2,7 +2,12 @@
   <app-navbar></app-navbar>
   <app-log-sidebar [ngClass]="sidebarStatus() ? 'isOpen' : '' "></app-log-sidebar>
   <app-video-homepage></app-video-homepage>
+<!-- needfix : Create section -->
   <app-weekly-top></app-weekly-top>
+  <app-subcribing></app-subcribing>
+  <app-documentary></app-documentary>
+  <app-locals></app-locals>
+<!-- end of section -->
   <app-footer></app-footer>
   <div id="div-to-close" (click)="closeSidebar()" [ngClass]="sidebarStatus() ? 'isOpen' : '' "></div>
 </section>
