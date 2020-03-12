@@ -1,6 +1,6 @@
 import { Link } from './../../shared/class/link';
 import { Component, OnInit } from '@angular/core';
-import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
+import { ModalStatus } from 'src/app/global-variables/modalStatus';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   //   { name: 'Poster', redirectTo: '' },
   //   { name: 'Exploration', redirectTo: '' }
   // ];
-  constructor(private varglo: VariablesGlobales) {}
+  constructor(private varglo: ModalStatus) {}
 
   ngOnInit() {
     this.afterScroll();

@@ -12,7 +12,7 @@ import { WeeklyTopComponent } from './components/homepage-categories/weekly-top/
 import { LogSidebarComponent } from './components/log-sidebar/log-sidebar.component';
 import { ConnectionFormComponent } from './components/connection-form/connection-form.component';
 import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
-import { VariablesGlobales } from './variable-globale/variable-global';
+import { ModalStatus } from './global-variables/modalStatus';
 import { SubcribingComponent } from './components/homepage-categories/subcribing/subcribing.component';
 import { DocumentaryComponent } from './components/homepage-categories/documentary/documentary.component';
 import { LocalsComponent } from './components/homepage-categories/locals/locals.component';
@@ -37,7 +37,7 @@ import { LocalsComponent } from './components/homepage-categories/locals/locals.
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [VariablesGlobales],
+  providers: [ModalStatus],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

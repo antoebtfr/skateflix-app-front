@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
+import { ModalStatus } from 'src/app/global-variables/modalStatus';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ConnectionFormComponent implements OnInit {
 
-  constructor(private varglo: VariablesGlobales, private fb: FormBuilder) { }
+  constructor(private varglo: ModalStatus, private fb: FormBuilder) { }
 
   public connectionForm = this.fb.group({
     email : ['', [Validators.required, Validators.email]],
