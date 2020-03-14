@@ -23,7 +23,7 @@ export class HomepageComponent implements OnInit {
     this.modalConf.closeSidebar();
   }
 
-  public connectedStatus(){
+  public connectedStatus() {
     return this.userConf.getConnexionStatus();
   }
 
