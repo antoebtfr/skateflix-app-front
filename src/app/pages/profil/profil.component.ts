@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent implements OnInit {
-
+  public selectedTopic = 'video';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public switchTopic(topic: string) {
+    this.selectedTopic = topic;
   }
 
 }

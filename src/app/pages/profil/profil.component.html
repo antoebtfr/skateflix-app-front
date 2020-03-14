@@ -4,16 +4,22 @@
         double_arrow
         </i>
 
-    <div class="profil-container">
-    </div>
+    <section class="profil-container">
+        <img src="https://lh3.googleusercontent.com/proxy/uX_3H-pO0Ln0KBZw20vV84u0WD5dPJFiE9CcSX-R8avpExn_PxOYoTWwHEMpAJvkXGxZbvHF-dkE2iWxHHg" width="200">
+        <div class="profil-info-container">
+            <h2> Teddy </h2>
+            <h2> Bear </h2>
+            <h2> 19 <span> ans</span> </h2>
+        </div>
+    </section>
 
     <section id="right">
         <div class="type-section">
             <ul id="type-container">
-                <li> Videos </li>
-                <li> Playlist </li>
-                <li> Description </li>
-                <li> Crew </li>
+                <li (click)="switchTopic('video')" class="topic" [ngClass]="selectedTopic === 'video' ? 'isSelected': ''"> Videos </li>
+                <li (click)="switchTopic('playlist')" class="topic" [ngClass]="selectedTopic === 'playlist' ? 'isSelected': ''"> Playlist </li>
+                <li (click)="switchTopic('description')" class="topic" [ngClass]="selectedTopic === 'description' ? 'isSelected': ''"> Description </li>
+                <li (click)="switchTopic('crew')" class="topic" [ngClass]="selectedTopic === 'crew' ? 'isSelected': ''"> Crew </li>
             </ul>
         </div>
 

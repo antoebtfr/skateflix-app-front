@@ -10,7 +10,31 @@
     left: 0;
     width: 40vw;
     height: 100vh;
-    background-color: lightblue;
+    background-color: tomato;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil-container img{
+    margin-bottom: 5vh;
+}
+
+.profil-container .profil-info-container{
+    width: 200px;
+}
+
+/* neefix: taille variable en fonction de la photo */
+
+.profil-container .profil-info-container h2 {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+}
+
+
+.profil-container h2 span {
+    font-size: 0.7em;
 }
 
 .type-section{
@@ -40,4 +64,8 @@
 
 #type-container li:hover{
     background-color: rgb(27, 27, 27);
+}
+
+.topic.isSelected{
+    border-bottom: red solid 1px;
 }
