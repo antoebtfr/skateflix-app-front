@@ -6,7 +6,7 @@
   />
   <ul>
     <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
-    <li *ngIf='connectedStatus()'>Profil</li>
+    <li *ngIf='connectedStatus()' [routerLink]="['../user']">Profil</li>
     <li>Mes abonnements</li>
     <li>Poster</li>
     <li>Exploration</li>

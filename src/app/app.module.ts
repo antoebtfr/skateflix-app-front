@@ -33,7 +33,7 @@ import { UserConf } from './variable-globale/user-conf';
     SubcribingComponent,
     DocumentaryComponent,
     LocalsComponent,
-    CategoriesComponent
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
