@@ -5,7 +5,8 @@
     border="0"
   />
   <ul>
-    <li (click)="openSidebar()">Connexion</li>
+    <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
+    <li *ngIf='connectedStatus()'>Profil</li>
     <li>Mes abonnements</li>
     <li>Poster</li>
     <li>Exploration</li>

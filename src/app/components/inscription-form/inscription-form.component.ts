@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class InscriptionFormComponent implements OnInit {
 
-  constructor(private varglo: VariablesGlobales, private fb: FormBuilder) { }
+  constructor(private modalConf: ModalConf, private fb: FormBuilder) { }
 
   public inscriptionForm = this.fb.group({
     firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
@@ -23,7 +23,7 @@ export class InscriptionFormComponent implements OnInit {
   }
 
   public switch() {
-    return this.varglo.switchToConnection();
+    return this.modalConf.switchToConnection();
   }
 
   public showUser() {

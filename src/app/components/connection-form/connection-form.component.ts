@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ConnectionFormComponent implements OnInit {
 
-  constructor(private varglo: VariablesGlobales, private fb: FormBuilder) { }
+  constructor(private modalConf: ModalConf, private fb: FormBuilder) { }
 
   public connectionForm = this.fb.group({
     email : ['', [Validators.required, Validators.email]],
@@ -22,7 +22,7 @@ export class ConnectionFormComponent implements OnInit {
   }
 
   public switch() {
-    this.varglo.switchToInscription();
+    this.modalConf.switchToInscription();
   }
 
   public sendUser() {

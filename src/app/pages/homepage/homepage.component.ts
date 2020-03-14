@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
+import { UserConf } from 'src/app/variable-globale/user-conf';
 
 @Component({
   selector: 'app-homepage',
@@ -8,18 +9,22 @@ import { VariablesGlobales } from 'src/app/variable-globale/variable-global';
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(private varglo: VariablesGlobales) { }
+  constructor(private modalConf: ModalConf, private userConf: UserConf) { }
 
   ngOnInit() {
     this.sidebarStatus();
   }
 
   public sidebarStatus() {
-    return this.varglo.getSidebarStatus();
+    return this.modalConf.getSidebarStatus();
   }
 
   public closeSidebar() {
-    this.varglo.closeSidebar();
+    this.modalConf.closeSidebar();
+  }
+
+  public connectedStatus(){
+    return this.userConf.getConnexionStatus();
   }
 
 }
