@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
   {path: 'ip', component: LogSidebarComponent},
   { path: 'validation', loadChildren: () => import('./pages/validation/validation.module').then(m => m.ValidationModule) },
-  { path: '404-not-found', loadChildren: () => import('./pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) }
+  { path: '404-not-found' , loadChildren: () => import('./pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
+  { path: 'user', loadChildren: () => import('./pages/profil/profil.module').then(m => m.ProfilModule) }
 ];
 
 @NgModule({

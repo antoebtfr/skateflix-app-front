@@ -5,9 +5,15 @@
     border="0"
   />
   <ul>
-    <li (click)="openSidebar()">Connexion</li>
+    <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
+    <li *ngIf='connectedStatus()' [routerLink]="['../user']">Profil</li>
     <li>Mes abonnements</li>
     <li>Poster</li>
     <li>Exploration</li>
+    <li *ngIf="connectedStatus()"> <i class="material-icons">
+      person
+      </i></li>
+
+      <!-- needfix: png person + arrow -->
   </ul>
 </section>

@@ -12,10 +12,12 @@ import { WeeklyTopComponent } from './components/homepage-categories/weekly-top/
 import { LogSidebarComponent } from './components/log-sidebar/log-sidebar.component';
 import { ConnectionFormComponent } from './components/connection-form/connection-form.component';
 import { InscriptionFormComponent } from './components/inscription-form/inscription-form.component';
-import { ModalStatus } from './global-variables/modalStatus';
+import { ModalConf } from './variable-globale/modal-conf';
 import { SubcribingComponent } from './components/homepage-categories/subcribing/subcribing.component';
 import { DocumentaryComponent } from './components/homepage-categories/documentary/documentary.component';
 import { LocalsComponent } from './components/homepage-categories/locals/locals.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { UserConf } from './variable-globale/user-conf';
 
 @NgModule({
   declarations: [
@@ -30,14 +32,15 @@ import { LocalsComponent } from './components/homepage-categories/locals/locals.
     InscriptionFormComponent,
     SubcribingComponent,
     DocumentaryComponent,
-    LocalsComponent
+    LocalsComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ModalStatus],
+  providers: [ModalConf, UserConf],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
-import { Link } from './../../shared/class/link';
 import { Component, OnInit } from '@angular/core';
-import { ModalStatus } from 'src/app/global-variables/modalStatus';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
+import { UserConf } from 'src/app/variable-globale/user-conf';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +8,8 @@ import { ModalStatus } from 'src/app/global-variables/modalStatus';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  // public links: Link[] = [
-  //   { name: 'Connexion', redirectTo: '', activate: this.test() },
-  //   { name: 'Mes abonnements', redirectTo: '' },
-  //   { name: 'Poster', redirectTo: '' },
-  //   { name: 'Exploration', redirectTo: '' }
-  // ];
-  constructor(private varglo: ModalStatus) {}
+
+  constructor(private modalConf: ModalConf, private userConf: UserConf) {}
 
   ngOnInit() {
     this.afterScroll();
@@ -31,6 +26,10 @@ export class NavbarComponent implements OnInit {
   }
 
   public openSidebar() {
-    this.varglo.openSidebar();
+    this.modalConf.openSidebar();
+  }
+
+  public connectedStatus() {
+    return this.userConf.getConnexionStatus();
   }
 }

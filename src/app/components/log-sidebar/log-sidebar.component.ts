@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalStatus } from 'src/app/global-variables/modalStatus';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
 
 @Component({
   selector: 'app-log-sidebar',
@@ -8,14 +8,14 @@ import { ModalStatus } from 'src/app/global-variables/modalStatus';
 })
 export class LogSidebarComponent implements OnInit {
 
-  constructor(private varglo: ModalStatus) { }
+  constructor(private modalConf: ModalConf) { }
 
   ngOnInit() {
     this.status();
   }
 
   public status() {
-    return this.varglo.getConnectionModalStatus();
+    return this.modalConf.getConnectionModalStatus();
   }
 
 }

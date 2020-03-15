@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 @Injectable()
-export class ModalStatus {
+export class ModalConf {
     private connectionModal = true; // true = Connection Modal - false = Inscription Modal
     private sidebar = false; // true = Sidebar open - false = Sidebar close
 
