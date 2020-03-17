@@ -19,6 +19,9 @@ import { LocalsComponent } from './components/homepage-categories/locals/locals.
 import { CategoriesComponent } from './components/categories/categories.component';
 import { UserConf } from './variable-globale/user-conf';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
