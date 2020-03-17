@@ -25,7 +25,7 @@
     width: 200px;
 }
 
-/* neefix: taille variable en fonction de la photo */
+/* needfix: taille variable en fonction de la photo */
 
 .profil-container .profil-info-container h2 {
     font-size: 1.5em;
@@ -37,11 +37,20 @@
     font-size: 0.7em;
 }
 
+#right{
+  width: 60vw;
+  height: 100vh;
+  position: relative;
+  left: 40vw;
+  overflow: auto;
+}
+
 .type-section{
-    width: 60vw;
+    width: 100%;
     height: 10vh;
-    position: relative;
-    left: 40vw;
+    position: sticky;
+    top:0;
+    z-index: 10;
 }
 
 #type-container{
@@ -68,4 +77,22 @@
 
 .topic.isSelected{
     border-bottom: red solid 1px;
+}
+
+.video-container{
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+.video-test{
+  width: 19vw;
+  height: 15vh;
+  background-color: #fff;
+  margin-bottom: 2vh;
+}
+
+#filter-container{
+  width: 100%;
+  height: 7vh;
+  background-color: rgb(29, 29, 29);
 }

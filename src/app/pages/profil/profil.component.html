@@ -1,28 +1,64 @@
 <!-- needfix : Rajout navbar -->
 <section id="body">
-    <i class="material-icons comeback-arrow" [routerLink]="['../homepage']">
-        double_arrow
-        </i>
+  <i class="material-icons comeback-arrow" [routerLink]="['../homepage']">
+    double_arrow
+  </i>
 
-    <section class="profil-container">
-        <img src="https://lh3.googleusercontent.com/proxy/uX_3H-pO0Ln0KBZw20vV84u0WD5dPJFiE9CcSX-R8avpExn_PxOYoTWwHEMpAJvkXGxZbvHF-dkE2iWxHHg" width="200">
-        <div class="profil-info-container">
-            <h2> Teddy </h2>
-            <h2> Bear </h2>
-            <h2> 19 <span> ans</span> </h2>
-        </div>
-    </section>
+  <section class="profil-container">
+    <img
+      src="https://lh3.googleusercontent.com/proxy/uX_3H-pO0Ln0KBZw20vV84u0WD5dPJFiE9CcSX-R8avpExn_PxOYoTWwHEMpAJvkXGxZbvHF-dkE2iWxHHg"
+      width="200"
+    />
+    <div class="profil-info-container">
+      <h2>Teddy</h2>
+      <h2>Bear</h2>
+      <h2>19 <span> ans</span></h2>
+    </div>
+  </section>
 
-    <section id="right">
-        <div class="type-section">
-            <ul id="type-container">
-                <li (click)="switchTopic('video')" class="topic" [ngClass]="selectedTopic === 'video' ? 'isSelected': ''"> Videos </li>
-                <li (click)="switchTopic('playlist')" class="topic" [ngClass]="selectedTopic === 'playlist' ? 'isSelected': ''"> Playlist </li>
-                <li (click)="switchTopic('description')" class="topic" [ngClass]="selectedTopic === 'description' ? 'isSelected': ''"> Description </li>
-                <li (click)="switchTopic('crew')" class="topic" [ngClass]="selectedTopic === 'crew' ? 'isSelected': ''"> Crew </li>
-            </ul>
-        </div>
+  <section id="right">
+    <div class="type-section" (click)="test()">
+      <ul id="type-container">
+        <li
+          (click)="switchTopic('video')"
+          class="topic"
+          [ngClass]="selectedTopic === 'video' ? 'isSelected' : ''"
+        >
+          Videos
+        </li>
+        <li
+          (click)="switchTopic('playlist')"
+          class="topic"
+          [ngClass]="selectedTopic === 'playlist' ? 'isSelected' : ''"
+        >
+          Playlist
+        </li>
+        <li
+          (click)="switchTopic('description')"
+          class="topic"
+          [ngClass]="selectedTopic === 'description' ? 'isSelected' : ''"
+        >
+          Description
+        </li>
+        <li
+          (click)="switchTopic('crew')"
+          class="topic"
+          [ngClass]="selectedTopic === 'crew' ? 'isSelected' : ''"
+        >
+          Crew
+        </li>
+      </ul>
+    </div>
 
-        
-    </section>
+    <div class="right-bottom">
+      <div #filter_container id="filter-container">
+        <p>Ajouter un filtre</p>
+      </div>
+
+      <div class="video-container">
+        <!-- needfix -->
+        <div class="video-test" *ngFor="let video of testArray"></div>
+      </div>
+    </div>
+  </section>
 </section>
