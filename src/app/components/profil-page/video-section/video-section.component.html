@@ -1,7 +1,7 @@
-<div #filter_container id="filter-container">
+<div #filter_container id="filter-container" [ngClass]="changeFilterContainerHeight ? 'changed' : ''">
   <p>Ajouter un filtre</p>
 </div>
 
-<div class="video-container">
+<div #video_container id="video-container" [ngClass]="changeFilterContainerHeight ? 'changed' : ''">
   <div class="video-test" *ngFor="let video of testArray"></div>
 </div>

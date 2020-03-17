@@ -17,32 +17,13 @@
     justify-content: center;
 }
 
-.profil-container img{
-    margin-bottom: 5vh;
-}
-
-.profil-container .profil-info-container{
-    width: 200px;
-}
-
-/* needfix: taille variable en fonction de la photo */
-
-.profil-container .profil-info-container h2 {
-    font-size: 1.5em;
-    letter-spacing: 0.2em;
-}
-
-
-.profil-container h2 span {
-    font-size: 0.7em;
-}
 
 #right{
   width: 80vw;
   height: 100vh;
   position: relative;
   left: 20vw;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .type-section{

@@ -1,7 +1,9 @@
-.video-container {
+#video-container {
   display: flex;
   flex-flow: wrap row;
+  height: 80vh;
   justify-content: space-around;
+  overflow: auto;
 }
 
 .video-test {
@@ -19,5 +21,35 @@
  */  background-color: rgb(39, 25, 117);
  display: flex;
  align-items: center;
+ margin-bottom: 3vh;
+ position: sticky;
+ top: 10vh;
+ transition: 0.8s;
 }
 
+#filter-container.changed{
+  height: 4vh;
+  margin-bottom: 0;
+}
+
+#video-container.changed {
+  height: 86vh;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+//   /* Track */
+//   ::-webkit-scrollbar-track {
+//   }
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 34, 34, 0.726); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 34, 34, 0.658); 
+}
