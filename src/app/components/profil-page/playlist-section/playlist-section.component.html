@@ -1,1 +1,8 @@
-<p>playlist-section works!</p>
+<section id="ps-body">
+    <div class="playlist-container" [ngSwitch]="PlaylistList.length === 0">
+        <div id="" *ngSwitchCase="true"> <p>Cette chaine de ne contient pas encore de playlist </p> </div>
+        <div *ngSwitchCase="false"> 
+            Cette chaine contient des playlists
+        </div>
+    </div>
+</section>

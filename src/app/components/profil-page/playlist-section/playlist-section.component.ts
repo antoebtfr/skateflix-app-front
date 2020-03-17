@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playlist-section.component.scss']
 })
 export class PlaylistSectionComponent implements OnInit {
+  public PlaylistList = [];
 
   constructor() { }
 

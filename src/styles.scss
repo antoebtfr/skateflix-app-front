@@ -57,3 +57,22 @@ body{
 	transform: rotateZ(180deg);
 	cursor: pointer;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+//   /* Track */
+//   ::-webkit-scrollbar-track {
+//   }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(34, 34, 34, 0.726); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 34, 34, 0.658); 
+  }
