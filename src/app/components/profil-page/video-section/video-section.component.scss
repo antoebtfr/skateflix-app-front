@@ -9,10 +9,16 @@
 .video-test {
   width: 19vw;
   height: 15vh;
-  background-color: #fff;
+  background-color: rgb(82, 72, 72);
   border: solid 2px rgb(51, 51, 51);
   margin-bottom: 2vh;
-  border-radius: 10px;
+  transition: 0.8s;
+  cursor:pointer;
+}
+
+.video-test:hover{
+  width: 20vw;
+  height: 18.3vh;
 }
 
 
