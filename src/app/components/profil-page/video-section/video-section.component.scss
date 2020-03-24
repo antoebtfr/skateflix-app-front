@@ -2,8 +2,9 @@
   display: flex;
   flex-flow: wrap row;
   height: 80vh;
-  justify-content: space-around;
+  justify-content: flex-end;
   overflow: auto;
+  padding: 1vh 1.75vh;
 }
 
 .video-test {
@@ -14,11 +15,6 @@
   margin-bottom: 2vh;
   transition: 0.8s;
   cursor:pointer;
-}
-
-.video-test:hover{
-  width: 20vw;
-  height: 18.3vh;
 }
 
 
@@ -33,6 +29,7 @@
  position: sticky;
  top: 10vh;
  transition: 0.8s;
+ color: white;
 }
 
 #filter-container.changed{
@@ -50,14 +47,14 @@
 //   /* Track */
 //   ::-webkit-scrollbar-track {
 //   }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(34, 34, 34, 0.726); 
+  background: rgba(34, 34, 34, 0.726);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(34, 34, 34, 0.658); 
+  background: rgba(34, 34, 34, 0.658);
 }

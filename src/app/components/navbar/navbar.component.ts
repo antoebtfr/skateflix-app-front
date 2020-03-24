@@ -12,10 +12,10 @@ export class NavbarComponent implements OnInit {
   constructor(private modalConf: ModalConf, private userConf: UserConf) {}
 
   ngOnInit() {
-    this.afterScroll();
+/*     this.afterScroll(); */
   }
 
-  private afterScroll() {
+/*   private afterScroll() {
     const navbarCSS = document.getElementById('nav-body').style;
 
     document.addEventListener('scroll', () => {
@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
         ? (navbarCSS.backgroundColor = '#191919')
         : (navbarCSS.backgroundColor = 'transparent');
     });
-  }
+  } */
 
   public openSidebar() {
     this.modalConf.openSidebar();

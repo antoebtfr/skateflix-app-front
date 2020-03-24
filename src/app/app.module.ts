@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/module/shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -5,7 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VideoHomepageComponent } from './components/video-homepage/video-homepage.component';
 import { WeeklyTopComponent } from './components/homepage-categories/weekly-top/weekly-top.component';
@@ -26,7 +26,6 @@ import { UserConf } from './variable-globale/user-conf';
   declarations: [
     AppComponent,
     HomepageComponent,
-    NavbarComponent,
     FooterComponent,
     VideoHomepageComponent,
     WeeklyTopComponent,
@@ -41,7 +40,8 @@ import { UserConf } from './variable-globale/user-conf';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [ModalConf, UserConf],
   bootstrap: [AppComponent]

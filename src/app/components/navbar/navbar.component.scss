@@ -1,15 +1,16 @@
 #nav-body{
-  background-color: transparent;
+  background-color:rgb(59, 59, 59);
   width: 100vw;
-  height: 12vh;
+  height: 7vh;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: space-between;
   transition: 0.8s;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   overflow-x: hidden;
+  color: white;
 }
 
 ul{

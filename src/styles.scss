@@ -44,7 +44,7 @@ table {
 }
 
 body{
-  color: white;
+  color: black;
   font-family: 'Spartan', sans-serif;
 }
 
@@ -61,18 +61,18 @@ body{
 ::-webkit-scrollbar {
     width: 10px;
   }
-  
+
 //   /* Track */
 //   ::-webkit-scrollbar-track {
 //   }
-   
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgba(34, 34, 34, 0.726); 
+    background: rgba(34, 34, 34, 0.726);
     border-radius: 10px;
   }
-  
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(34, 34, 34, 0.658); 
+    background: rgba(34, 34, 34, 0.658);
   }
