@@ -20,8 +20,6 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { UserConf } from './variable-globale/user-conf';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
