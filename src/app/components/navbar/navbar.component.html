@@ -1,9 +1,10 @@
 <section id="nav-body">
-  <img
+<!--   <img
     src="https://fontmeme.com/permalink/200304/d63203eed2ab0cb62441861258578d73.png"
     alt="netflix-font"
     border="0"
-  />
+  /> -->
+  <h1> SkateWatch </h1>
   <ul>
     <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
     <li *ngIf='connectedStatus()' [routerLink]="['../user']">Profil</li>

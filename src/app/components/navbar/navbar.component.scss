@@ -1,5 +1,5 @@
 #nav-body{
-  background-color:rgb(59, 59, 59);
+  background-color: #32809e;
   width: 100vw;
   height: 7vh;
   display: flex;
@@ -11,6 +11,10 @@
   z-index: 100;
   overflow: hidden;
   color: white;
+}
+
+h1{
+  margin-left: 2vw;
 }
 
 ul{

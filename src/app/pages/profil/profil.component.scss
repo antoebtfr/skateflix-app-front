@@ -12,7 +12,7 @@
     left: 0;
     width: 20vw;
     height: 93vh;
-    background-color: tomato;
+    background-color: #e0e0e0;
     display: flex;
     flex-flow: wrap column;
     align-items: center;
@@ -34,16 +34,15 @@
     position: sticky;
     top:0;
     z-index: 10;
-    box-shadow: 20px 0 10px rgb(25, 25, 25);
 }
 
 #type-container{
-    background-color: #171717;
+    background-color: white;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: white;
+
 }
 
 #type-container li{
@@ -57,7 +56,7 @@
 }
 
 #type-container li:hover{
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(219, 219, 219);
 }
 
 .topic.isSelected{
