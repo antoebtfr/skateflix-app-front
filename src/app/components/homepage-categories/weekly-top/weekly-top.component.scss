@@ -4,10 +4,26 @@
     padding: 5vh 0;
 }
 
+#weekly-top-title-container{
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap row;
+  width: 100vw;
+}
+
 h2{
     margin-left: 2.5vw;
     font-size: 2.7vw;
     margin-bottom: 5vh;
+    display: inline-block;
+    background-color: #32809e;
+    z-index: 10;
+    width: 30vw;
+}
+
+hr{
+  position: relative;
+  top: -9vh;
 }
 
 .video-container{

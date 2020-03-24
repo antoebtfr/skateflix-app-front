@@ -4,7 +4,7 @@
     alt="netflix-font"
     border="0"
   /> -->
-  <h1> SkateWatch </h1>
+  <h1 [routerLink]="['../homepage']"> SkateWatch </h1>
   <ul>
     <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
     <li *ngIf='connectedStatus()' [routerLink]="['../user']">Profil</li>
