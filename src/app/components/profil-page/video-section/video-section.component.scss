@@ -58,3 +58,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(34, 34, 34, 0.658);
 }
+
+p{
+  margin-left: 1.5vw;
+  padding: 7.5px;
+  border-radius: 5px;
+}
+
+p:hover{
+  background-color: rgba(47, 47, 47, 0.616);
+  cursor: pointer;
+}

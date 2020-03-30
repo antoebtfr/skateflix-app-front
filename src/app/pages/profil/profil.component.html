@@ -18,10 +18,6 @@
           [ngClass]="selectedTopic === 'playlist' ? 'isSelected' : ''">
           Playlist
         </li>
-        <li (click)="switchTopic('description')" class="topic"
-          [ngClass]="selectedTopic === 'description' ? 'isSelected' : ''">
-          Description
-        </li>
         <li (click)="switchTopic('crew')" class="topic" [ngClass]="selectedTopic === 'crew' ? 'isSelected' : ''">
           Crew
         </li>
@@ -33,7 +29,6 @@
       <div [ngSwitch]="selectedTopic">
         <app-video-section *ngSwitchCase="'video'"></app-video-section>
         <app-playlist-section class="margin-top" *ngSwitchCase="'playlist'"></app-playlist-section>
-        <app-description-section class="margin-top" *ngSwitchCase="'description'"></app-description-section>
         <div id="error-info" class="margin-top" *ngSwitchDefault> <p>Ce message signifie que quelque chose n'a pas fonctionné correctement.
           Veuillez recharger la page. Si le problème persiste, veuillez contacter le support </p> </div>
       </div>

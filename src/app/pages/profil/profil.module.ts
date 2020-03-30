@@ -6,7 +6,6 @@ import { ProfilRoutingModule } from './profil-routing.module';
 import { ProfilComponent } from './profil.component';
 import { VideoSectionComponent } from '../../components/profil-page/video-section/video-section.component';
 import { PlaylistSectionComponent } from '../../components/profil-page/playlist-section/playlist-section.component';
-import { DescriptionSectionComponent } from '../../components/profil-page/description-section/description-section.component';
 import { ProfilSectionComponent } from '../../components/profil-page/profil-section/profil-section.component';
 
 @NgModule({
@@ -14,7 +13,6 @@ import { ProfilSectionComponent } from '../../components/profil-page/profil-sect
     ProfilComponent,
     VideoSectionComponent,
     PlaylistSectionComponent,
-    DescriptionSectionComponent,
     ProfilSectionComponent,
   ],
   imports: [CommonModule, ProfilRoutingModule, SharedModule]
