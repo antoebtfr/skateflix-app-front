@@ -1,3 +1,4 @@
+import { UserConf } from 'src/app/variable-globale/user-conf';
 import { Component, OnInit } from '@angular/core';
 import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -9,7 +10,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ConnectionFormComponent implements OnInit {
 
-  constructor(private modalConf: ModalConf, private fb: FormBuilder) { }
+  constructor(private modalConf: ModalConf, private fb: FormBuilder, private userConf: UserConf) { }
 
   public connectionForm = this.fb.group({
     email : ['', [Validators.required, Validators.email]],
@@ -32,7 +33,12 @@ export class ConnectionFormComponent implements OnInit {
     console.log(this.connectionForm.value);
     this.connectionForm.reset();
     this.submitted = false;
+    this.connection();
     }
+  }
+
+  public connection(){
+    this.userConf.connection();
   }
 
 }

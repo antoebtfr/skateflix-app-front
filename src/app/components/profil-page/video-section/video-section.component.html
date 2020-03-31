@@ -1,7 +1,23 @@
-<div #filter_container id="filter-container" [ngClass]="changeFilterContainerHeight ? 'changed' : ''">
+<div
+  #filter_container
+  id="filter-container"
+  [ngClass]="changeFilterContainerHeight ? 'changed' : ''"
+>
   <p>Ajouter un filtre</p>
 </div>
 
-<div #video_container id="video-container" [ngClass]="changeFilterContainerHeight ? 'changed' : ''">
+<div
+  #video_container
+  id="video-container"
+  [ngClass]="changeFilterContainerHeight ? 'changed' : ''"
+>
+  <div id="promo-video-container">
+    <article id="promo-video">
+      <iframe src="https://www.youtube.com/embed/XBgbBrxj2to?controls=0&&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <div id="promo-video-infos">
+
+    </div>
+  </div>
   <div class="video-test" *ngFor="let video of testArray"></div>
 </div>

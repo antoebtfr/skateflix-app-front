@@ -11,4 +11,8 @@ export class UserConf {
   public disconnect() {
     this.connected = false;
   }
+
+  public connection() {
+    this.connected = true;
+  }
 }

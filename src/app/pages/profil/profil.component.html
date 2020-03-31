@@ -29,7 +29,7 @@
       <div [ngSwitch]="selectedTopic">
         <app-video-section *ngSwitchCase="'video'"></app-video-section>
         <app-playlist-section class="margin-top" *ngSwitchCase="'playlist'"></app-playlist-section>
-        <div id="error-info" class="margin-top" *ngSwitchDefault> <p>Ce message signifie que quelque chose n'a pas fonctionné correctement.
+        <div id="error-info" class="margin-top" *ngSwitchDefault> <p>Ce message signifie qu'un élément n'a pas fonctionné correctement.
           Veuillez recharger la page. Si le problème persiste, veuillez contacter le support </p> </div>
       </div>
     </div>
