@@ -5,14 +5,14 @@ background-color: red;
 }
 
 app-log-sidebar{
-    z-index: 100;
+    z-index: 1000;
     position: fixed;
     right: -30vw;
     transition: 0.8s;
 }
 
 app-log-sidebar.isOpen{
-    right: 0;  
+    right: 0;
 }
 
 #div-to-close{
@@ -20,7 +20,7 @@ app-log-sidebar.isOpen{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     left:100vw;
     top: 0;
     transition: 0.3s;

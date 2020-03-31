@@ -1,0 +1,27 @@
+#userlist-body{
+background-color: #f3f3f3;
+border-radius: 10px;
+position: fixed;
+top: 6.5vh;
+right: 1vh;
+z-index: 100;
+overflow: hidden;
+}
+
+li{
+  width:100%;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+li:hover{
+  background-color: #dddddd;
+}
+
+ul{
+  width: 100%;
+}
+
+.red{
+ color: red;
+}

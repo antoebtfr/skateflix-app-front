@@ -8,22 +8,13 @@ import { UserConf } from 'src/app/variable-globale/user-conf';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  public userList = false;
+  public test = false;
   constructor(private modalConf: ModalConf, private userConf: UserConf) {}
 
   ngOnInit() {
-/*     this.afterScroll(); */
+    this.closeUserList();
   }
-
-/*   private afterScroll() {
-    const navbarCSS = document.getElementById('nav-body').style;
-
-    document.addEventListener('scroll', () => {
-      scrollY > 0
-        ? (navbarCSS.backgroundColor = '#191919')
-        : (navbarCSS.backgroundColor = 'transparent');
-    });
-  } */
 
   public openSidebar() {
     this.modalConf.openSidebar();
@@ -31,5 +22,18 @@ export class NavbarComponent implements OnInit {
 
   public connectedStatus() {
     return this.userConf.getConnexionStatus();
+  }
+  public showUserList() {
+    setTimeout(() => {
+      this.userList = true;
+    }, 30);
+  }
+
+  public closeUserList() {
+      addEventListener('click', () => {
+        if (this.userList) {
+          this.userList = false;
+        }
+      });
   }
 }

@@ -7,4 +7,8 @@ export class UserConf {
   public getConnexionStatus() {
     return this.connected;
   }
+
+  public disconnect() {
+    this.connected = false;
+  }
 }

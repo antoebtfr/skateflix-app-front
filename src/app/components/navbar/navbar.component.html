@@ -11,10 +11,12 @@
     <li>Mes abonnements</li>
     <li>Poster</li>
     <li><input type="text" id="nav-searchbar" placeholder="Rechercher"></li>
-    <li *ngIf="connectedStatus()"> <i class="material-icons">
+    <li *ngIf="connectedStatus()" (click)="showUserList()"> <i class="material-icons">
       person
       </i></li>
 
       <!-- needfix: png person + arrow -->
   </ul>
 </section>
+
+<app-user-list *ngIf="userList"></app-user-list>
