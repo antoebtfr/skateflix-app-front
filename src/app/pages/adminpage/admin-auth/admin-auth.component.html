@@ -1,0 +1,11 @@
+<section id='admin-auth-body'>
+
+  <h2 class="title"> SkateWatch <span> admin </span> </h2>
+
+  <form id="auth-admin-form" [formGroup]="authForm">
+    <input formControlName="id" placeholder="Identifiant">
+    <input formControlName="password" type="password" placeholder="Mot de passe">
+    <button type="submit" (click)="sendAdmin()"> Valider </button>
+  </form>
+
+</section>

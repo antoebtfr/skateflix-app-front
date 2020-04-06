@@ -12,11 +12,14 @@
     left: 0;
     width: 20vw;
     height: 93vh;
-    background-color: #e0e0e0;
+/*     background-color: #e0e0e0; */
+    background-image: url(https://lh3.googleusercontent.com/proxy/75F4jNgsC5zm3n9aj-zjdDplWM1pMgYXjiodXEhp_8CrEr2i31wGuitHuqhkbT09XINjLZovNSrImEob0S-WjlGKtrl5qB0UcfLCUxc);
+    background-size: cover;
     display: flex;
     flex-flow: wrap column;
     align-items: center;
     justify-content: center;
+    color: white; 
 }
 
 

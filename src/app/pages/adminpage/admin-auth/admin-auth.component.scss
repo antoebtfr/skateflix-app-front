@@ -1,0 +1,48 @@
+#admin-auth-body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#auth-admin-form{
+  width: 60%;
+  height: 30%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#auth-admin-form input{
+  width: 70%;
+  height: 10px;
+  padding: 5px;
+  border-radius: 10px;
+border: solid rgb(190, 190, 190) 2px;
+margin-bottom: 5px;
+}
+
+h2{
+  font-size: 3em;
+}
+span{
+  font-size: 0.5em;
+  color: rgb(99, 197, 197);
+}
+
+button{
+  width: 13%;
+  height: 13%;
+  border-radius: 10px;
+  font-size: 1.7vh;
+  color: rgb(63, 63, 63);
+  transition: 0.8s;
+}
+
+button:hover{
+  background-color: rgb(45, 148, 216);
+  color: white;
+}
