@@ -1,14 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AdminpageRoutingModule } from './adminpage-routing.module';
 import { AdminpageComponent } from './adminpage.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
+import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-sidebar.component';
+
 
 
 @NgModule({
-  declarations: [AdminpageComponent, AdminAuthComponent],
+  declarations: [
+    AdminpageComponent,
+    AdminAuthComponent,
+    AdminSidebarComponent
+  ],
+
   imports: [
     CommonModule,
     AdminpageRoutingModule,

@@ -1,9 +1,12 @@
 <section id='admin-body'>
   <header> <h2>SkateWatch <span> admin </span></h2> </header>
 
-  <div id="admin-sidebar">
+ <app-admin-sidebar></app-admin-sidebar>
+
+  <div class="content"> 
+    <h3> Last users created </h3>
     <ul>
-      <li></li>
+      <li *ngFor="let us of user"> {{us}}</li>
     </ul>
   </div>
   

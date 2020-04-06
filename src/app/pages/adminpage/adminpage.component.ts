@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminpageComponent implements OnInit {
 
+  public user = [
+    1, 2, 3, 4 , 4 , 4 , 4 , 4 , 4 , 4, , 5 , 55 , 5 , 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+  ];
+
   constructor() { }
 
   ngOnInit() {

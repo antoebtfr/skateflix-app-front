@@ -1,0 +1,25 @@
+<aside [ngClass]="adminSidebar ? '' : 'closed' ">
+    <p id="close" (click)="closeSidebar()"> X </p>
+
+    <div class="notifications">
+        Aucune notifications pour l'instant
+    </div>
+
+    <div class="admin-side-links">
+        <ul>
+            <li class="admin-aside-link"> Administrateurs</li>
+            <li class="admin-aside-link"> Users </li>
+            <li class="admin-aside-link"> Videos </li>
+            <li class="admin-aside-link"> Crew </li>
+            <li class="admin-aside-link"> Sponsors </li>
+            <li class="admin-aside-link"> Admin - chatbox </li>
+            <li class="admin-aside-link"> Developpeurs </li>
+            <li class="admin-aside-link red"> Déconnection </li>
+        </ul>
+    </div>
+
+</aside>
+
+<span id="menu-btn" class="material-icons" (click)="openSidebar()">
+    menu
+</span>
