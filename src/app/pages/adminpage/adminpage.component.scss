@@ -42,3 +42,28 @@ ul{
 li{
   margin-bottom: 2vh;
 }
+
+.selected-cate{
+  color: inherit;
+  font-size: inherit;
+  transition: 0.8s ease-in-out;
+  padding: 3px;
+}
+
+.selected-cate:hover{
+  background-color: grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#categorie-list{
+  padding: 5px 2px;
+  border: black 1px solid ;
+  display: inline-block;
+  position: fixed;
+  left: 45vw;
+}
+
+#categorie-list ul li{
+  cursor: pointer;
+}
