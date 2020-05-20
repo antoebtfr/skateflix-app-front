@@ -6,6 +6,8 @@ import { AdminpageRoutingModule } from './adminpage-routing.module';
 import { AdminpageComponent } from './adminpage.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-sidebar.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,13 +15,15 @@ import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-si
   declarations: [
     AdminpageComponent,
     AdminAuthComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    AdminListComponent
   ],
 
   imports: [
     CommonModule,
     AdminpageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class AdminpageModule { }

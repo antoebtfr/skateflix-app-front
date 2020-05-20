@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminpageComponent } from './adminpage.component';
 import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-sidebar.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'auth'},
   { path: 'auth', component: AdminAuthComponent},
   { path: 'dashboard', component: AdminpageComponent},
-  { path: 'ip', component: AdminSidebarComponent}
+  { path: 'ip', component: AdminSidebarComponent},
+  { path: 'admin-list', component: AdminListComponent}
 ];
 
 @NgModule({

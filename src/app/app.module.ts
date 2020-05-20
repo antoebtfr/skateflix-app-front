@@ -2,6 +2,7 @@ import { SharedModule } from './shared/module/shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,7 @@ import { UserConf } from './variable-globale/user-conf';
     AppRoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    HttpClientModule
   ],
   providers: [ModalConf, UserConf],
   bootstrap: [AppComponent]

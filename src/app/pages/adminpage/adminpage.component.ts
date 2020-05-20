@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminpageComponent implements OnInit {
 
-  private cateListCSS;
+  private cateListCSS; // Modal showing off list of categories
   public user = [
     1, 2, 3, 4 , 4 , 4 , 4 , 4 , 4 , 4, , 5 , 55 , 5 , 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
   ];
@@ -21,8 +21,6 @@ export class AdminpageComponent implements OnInit {
   }
 
   public transmission(categorie: string) {
-
-
     this.selectedCategories = categorie;
     this.cateListCSS.display = 'none';
   }
