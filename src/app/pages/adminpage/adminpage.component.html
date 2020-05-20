@@ -4,7 +4,7 @@
  <app-admin-sidebar></app-admin-sidebar>
 
   <div class="content"> 
-    <h3> Last <span class="selected-cate">{{selectedCategories}}</span> created </h3>
+    <h3> Last <span class="selected-cate" (click)="openCategoriesList()">{{selectedCategories}}</span> created </h3>
 
     <div id="categorie-list">
       <ul>
