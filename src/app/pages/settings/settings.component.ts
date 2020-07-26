@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
+  public clicked = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public changeClicked(x) {
+    this.clicked = '';
+    this.clicked = x ;
   }
 
 }

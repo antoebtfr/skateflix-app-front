@@ -23,6 +23,9 @@ height: 100%;
 padding-left: 2vw;
 }
 
+.isSelected, ul li .isSelected:hover{
+  background-color: rgba(97, 97, 97, 0.794);
+}
 ul li:hover{
   background-color: rgba(44, 44, 44, 0.568);
 }
