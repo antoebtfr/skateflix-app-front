@@ -1,10 +1,13 @@
+<app-navbar></app-navbar>
+
 <section id="settings-body">
+
   <div id="list-container">
     <ul>
-      <li (click)="changeClicked('compte')"[ngClass]="clicked === 'compte' ? 'isSelected' : '' ">Compte</li>
-      <li (click)="changeClicked('notif')"[ngClass]="clicked === 'notif' ? 'isSelected' : '' ">Notifications</li>
-      <li (click)="changeClicked('app-con')"[ngClass]="clicked === 'app-con' ? 'isSelected' : '' ">Appareils connectés</li>
-      <li (click)="changeClicked('delete-acc')"[ngClass]="clicked === 'delete-acc' ? 'isSelected' : '' ">Supprimer le compte</li>
+      <li (click)="changeClicked('compte')"[ngClass]="isSelected === 'compte' ? 'isSelected' : '' ">Compte</li>
+      <li (click)="changeClicked('notif')"[ngClass]="isSelected=== 'notif' ? 'isSelected' : '' ">Notifications</li>
+      <li (click)="changeClicked('app-con')"[ngClass]="isSelected === 'app-con' ? 'isSelected' : '' ">Appareils connectés</li>
+      <li (click)="changeClicked('delete-acc')"[ngClass]="isSelected === 'delete-acc' ? 'isSelected' : '' ">Supprimer le compte</li>
     </ul>
   </div>
 </section>

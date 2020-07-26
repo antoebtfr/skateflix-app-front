@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  public clicked = '';
+  public isSelected = 'compte';
 
   constructor() { }
 
@@ -14,8 +14,8 @@ export class SettingsComponent implements OnInit {
   }
 
   public changeClicked(x) {
-    this.clicked = '';
-    this.clicked = x ;
+    this.isSelected = '';
+    this.isSelected = x ;
   }
 
 }
