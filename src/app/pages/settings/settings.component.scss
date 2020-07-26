@@ -1,0 +1,28 @@
+#settings-body{
+  height: 100vh;
+  background-color: red;
+}
+
+#list-container{
+  background-color: black ;
+  color: white;
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ul li {
+padding: 4vh 0;
+cursor: pointer;
+width: 13vw;
+height: 100%;
+padding-left: 2vw;
+}
+
+ul li:hover{
+  background-color: rgba(44, 44, 44, 0.568);
+}
