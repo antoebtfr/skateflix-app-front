@@ -22,6 +22,10 @@
         Appareils connectés
       </li>
       <li
+      (click)="changeClicked('premium')"
+      [ngClass]="isSelected === 'premium' ? 'isSelected' : '' "
+      > Passer premium </li>
+      <li
         (click)="changeClicked('delete-acc')"
         [ngClass]="isSelected === 'deleteacc' ? 'isSelected' : ''"
       >
@@ -35,5 +39,6 @@
     <app-app-connected *ngSwitchCase="'appcon'"></app-app-connected>
     <app-delete-account *ngSwitchCase="'deleteacc'"></app-delete-account>
     <app-notifications *ngSwitchCase="'notif'"></app-notifications>
+    <app-sett-premium *ngSwitchCase="'premium'"></app-sett-premium>
   </section>
 </section>

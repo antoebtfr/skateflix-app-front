@@ -8,10 +8,11 @@ import { MyProfilComponent } from './../../components/setting-pages/my-profil/my
 import { AppConnectedComponent } from '../../components/setting-pages/app-connected/app-connected.component';
 import { NotificationsComponent } from './../../components/setting-pages/notifications/notifications.component';
 import { DeleteAccountComponent } from '../../components/setting-pages/delete-account/delete-account.component';
+import { SettPremiumComponent } from '../../components/setting-pages/sett-premium/sett-premium.component';
 
 
 @NgModule({
-  declarations: [SettingsComponent, MyProfilComponent, AppConnectedComponent, NotificationsComponent, DeleteAccountComponent],
+  declarations: [SettingsComponent, MyProfilComponent, AppConnectedComponent, NotificationsComponent, DeleteAccountComponent, SettPremiumComponent],
   imports: [
     CommonModule,
     SettingsRoutingModule,

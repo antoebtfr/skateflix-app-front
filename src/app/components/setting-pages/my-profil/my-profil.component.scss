@@ -13,6 +13,11 @@
   padding: 1vh;
 }
 
+#bio-container{
+  width: 80vw;
+}
+
 .container:hover{
   background-color: rgba(54, 54, 54, 0.63);
+  border-radius: 0.5vh;
 }
