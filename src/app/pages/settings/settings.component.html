@@ -4,8 +4,8 @@
   <div id="list-container">
     <ul>
       <li
-        (click)="changeClicked('compte')"
-        [ngClass]="isSelected === 'compte' ? 'isSelected' : ''"
+        (click)="changeClicked('myprofil')"
+        [ngClass]="isSelected === 'myprofil' ? 'isSelected' : ''"
       >
         Compte
       </li>
@@ -16,14 +16,14 @@
         Notifications
       </li>
       <li
-        (click)="changeClicked('app-con')"
-        [ngClass]="isSelected === 'app-con' ? 'isSelected' : ''"
+        (click)="changeClicked('appcon')"
+        [ngClass]="isSelected === 'appcon' ? 'isSelected' : ''"
       >
         Appareils connectés
       </li>
       <li
         (click)="changeClicked('delete-acc')"
-        [ngClass]="isSelected === 'delete-acc' ? 'isSelected' : ''"
+        [ngClass]="isSelected === 'deleteacc' ? 'isSelected' : ''"
       >
         Supprimer le compte
       </li>
@@ -31,11 +31,9 @@
   </div>
 
   <section [ngSwitch]="isSelected" id="section-container">
-
     <app-my-profil *ngSwitchCase="'myprofil'"></app-my-profil>
     <app-app-connected *ngSwitchCase="'appcon'"></app-app-connected>
     <app-delete-account *ngSwitchCase="'deleteacc'"></app-delete-account>
     <app-notifications *ngSwitchCase="'notif'"></app-notifications>
-
   </section>
 </section>
