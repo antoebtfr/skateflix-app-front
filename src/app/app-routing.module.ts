@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: '404-not-found' , loadChildren: () => import('./pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
   { path: 'user', loadChildren: () => import('./pages/profil/profil.module').then(m => m.ProfilModule) },
   { path: 'admin', loadChildren: () => import('./pages/adminpage/adminpage.module').then(m => m.AdminpageModule) },
-  { path: 'settings', loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule) }
+  { path: 'settings', loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule) },
+  { path: 'smartphone-app', loadChildren: () => import('./pages/smartphone-app/smartphone-app.module').then(m => m.SmartphoneAppModule) }
 ];
 
 @NgModule({
