@@ -1,6 +1,9 @@
 #settings-body{
   height: 100vh;
   background-color: red;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #list-container{
@@ -28,4 +31,12 @@ padding-left: 2vw;
 }
 ul li:hover{
   background-color: rgba(44, 44, 44, 0.568);
+}
+
+#section-container{
+  overflow: hidden;
+  height: 93vh;
+  width: 85vw;
+  background-color: yellow;
+  margin-top: 7vh;
 }
