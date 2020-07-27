@@ -1,3 +1,4 @@
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { UserConf } from 'src/app/variable-globale/user-conf';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,13 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private userConf: UserConf) { }
+  constructor(private userConf: UserConf, private modalConf: ModalConf) { }
 
   ngOnInit() {
   }
 
-  public disconnect(){
+  public disconnect() {
     this.userConf.disconnect();
+  }
+
+  public switchSettingsTabs(tab: string) {
+    this.modalConf.switchSettingsTab(tab);
+    console.log(this.modalConf.getSettingsTab());
   }
 
 }

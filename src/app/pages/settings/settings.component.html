@@ -4,29 +4,29 @@
   <div id="list-container">
     <ul>
       <li
-        (click)="changeClicked('myprofil')"
+        (click)="switchTab('myprofil')"
         [ngClass]="isSelected === 'myprofil' ? 'isSelected' : ''"
       >
         Compte
       </li>
       <li
-        (click)="changeClicked('notif')"
+        (click)="switchTab('notif')"
         [ngClass]="isSelected === 'notif' ? 'isSelected' : ''"
       >
         Notifications
       </li>
       <li
-        (click)="changeClicked('appcon')"
+        (click)="switchTab('appcon')"
         [ngClass]="isSelected === 'appcon' ? 'isSelected' : ''"
       >
         Appareils connectés
       </li>
       <li
-      (click)="changeClicked('premium')"
+      (click)="switchTab('premium')"
       [ngClass]="isSelected === 'premium' ? 'isSelected' : '' "
       > Passer premium </li>
       <li
-        (click)="changeClicked('deleteacc')"
+        (click)="switchTab('deleteacc')"
         [ngClass]="isSelected === 'deleteacc' ? 'isSelected' : ''"
       >
         Supprimer le compte

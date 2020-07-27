@@ -1,3 +1,4 @@
+import { ModalConf } from './../../variable-globale/modal-conf';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,16 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  public isSelected = 'deleteacc'; // Valeur par défaut de la liste
+  public isSelected = ''; // Valeur par défaut de la liste
 
-  constructor() { }
+  constructor(private modalConf: ModalConf) { }
 
   ngOnInit() {
+    this.isSelected = this.getTab();
   }
 
-  public changeClicked(x) {
-    this.isSelected = '';
-    this.isSelected = x ;
+
+  public switchTab(tab: string) {
+    this.isSelected = tab;
   }
 
+  private getTab() {
+    return this.modalConf.getSettingsTab();
+  }
 }
