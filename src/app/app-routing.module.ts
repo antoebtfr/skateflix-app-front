@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'user', loadChildren: () => import('./pages/profil/profil.module').then(m => m.ProfilModule) },
   { path: 'admin', loadChildren: () => import('./pages/adminpage/adminpage.module').then(m => m.AdminpageModule) },
   { path: 'settings', loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule) },
-  { path: 'smartphone-app', loadChildren: () => import('./pages/smartphone-app/smartphone-app.module').then(m => m.SmartphoneAppModule) }
+  { path: 'smartphone-app', loadChildren: () => import('./pages/smartphone-app/smartphone-app.module').then(m => m.SmartphoneAppModule) },
+  { path: 'informations', loadChildren: () => import('./pages/legals/legals.module').then(m => m.LegalsModule) }
 ];
 
 @NgModule({
