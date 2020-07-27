@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-  public isSelected = 'myprofil'; // Valeur par défaut de la liste
+  public isSelected = 'deleteacc'; // Valeur par défaut de la liste
 
   constructor() { }
 

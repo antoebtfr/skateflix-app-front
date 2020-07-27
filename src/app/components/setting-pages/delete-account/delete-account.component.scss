@@ -2,4 +2,27 @@
   height: 93vh;
   background-color: pink;
   color: white;
+
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 10vh;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+div{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  height: 30vh;
+  text-align: center;
+
+}
+
+
+button{
+  width: 17vw;
+  height: 40px;
+  cursor: pointer;
 }

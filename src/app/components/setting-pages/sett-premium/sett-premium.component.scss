@@ -2,4 +2,18 @@
   height: 100vh;
   background-color: red;
   color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.fat{
+  font-size: 3vh;
+  width: 100vw;
+  margin-top: 4vh; 
+}
+
+.text{
+  text-align: center;
 }
