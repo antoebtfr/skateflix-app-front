@@ -2,4 +2,17 @@
   height: 93vh;
   background-color: blue;
   color: white;
+  padding: 5vh;
+}
+
+.container{
+  width: 38vw;
+  display: inline-block;
+  margin-bottom: 4vh;
+  cursor: pointer;
+  padding: 1vh;
+}
+
+.container:hover{
+  background-color: rgba(54, 54, 54, 0.63);
 }
