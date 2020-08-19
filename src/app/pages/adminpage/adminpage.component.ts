@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/shared/service/user.service';
+import { User } from 'src/app/shared/class/user';
 
 @Component({
   selector: 'app-adminpage',
@@ -6,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adminpage.component.scss']
 })
 export class AdminpageComponent implements OnInit {
+  constructor(private userService: UserService) { }
 
   private cateListCSS; // Modal showing off list of categories
-  public user = [
-    1, 2, 3, 4 , 4 , 4 , 4 , 4 , 4 , 4, , 5 , 55 , 5 , 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-  ];
+  public users: User[];
   public categories = ['users', 'video'];
 
   public selectedCategories = 'users';
-  constructor() { }
+
 
   ngOnInit() {
     this.cateListCSS = document.getElementById('categorie-list').style;
+    this.userService.getAll().subscribe( data => this.users = data);
   }
 
   public transmission(categorie: string) {
@@ -27,5 +29,9 @@ export class AdminpageComponent implements OnInit {
 
   public openCategoriesList() {
   this.cateListCSS.display = 'inline-block';
+  }
+
+  public deleteUser(id: number) {
+    this.userService.deleteUser(id).subscribe();
   }
 }

@@ -26,7 +26,7 @@ export class InscriptionFormComponent implements OnInit {
     return this.modalConf.switchToConnection();
   }
 
-  public showUser() {
+  public sendUser() {
     if (!this.inscriptionForm.value.CGU) {
       throw alert('Veuillez acceptez les conditions d\'utilisation');
     }

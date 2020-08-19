@@ -13,7 +13,10 @@
     </div>
 
     <ul>
-      <li *ngFor="let us of user"> {{us}}</li>
+      <li *ngFor="let user of users"> {{user.id}} / {{user.surname}} / {{user.firstname}} / {{user.country}} 
+        <button class="modify"> Modifier </button> 
+        <button class="delete" (click)="deleteUser(user.id)">X</button>
+      </li>
     </ul>
 
   </div>

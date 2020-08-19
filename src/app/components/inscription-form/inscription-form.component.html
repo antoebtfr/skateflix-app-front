@@ -23,7 +23,7 @@
             <label for="cgu-checkbox" class="conditions" id="cgu-checkbox-label"> J'accepte les CGU </label>
         </div>
 
-        <button type="submit" id="inscription-btn" (click)="showUser()" [disabled]="!inscriptionForm.valid"
+        <button type="submit" id="inscription-btn" (click)="sendUser()" [disabled]="!inscriptionForm.valid"
             [ngClass]="inscriptionForm.valid ? 'valid' : 'invalid' ">Inscription</button>
     </form>
     <p>Déja inscrit? Connecte-toi en cliquant <span (click)="switch()">ici</span></p>
