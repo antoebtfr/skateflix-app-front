@@ -1,0 +1,15 @@
+<app-admin-sidebar></app-admin-sidebar>
+
+<h2>Liste des utilisateurs</h2>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user.id }} / {{ user.surname }} / {{ user.firstname }} /
+    <span *ngIf="user.country"> {{ user.country }} </span>
+    <span *ngIf="!user.country"> (pays non renseigné) </span> /
+    <span *ngIf="user.isPremium"> PREMIUM </span>
+    <span *ngIf="!user.isPremium"> NON PREMIUM </span>
+    <button class="modify">Modifier</button>
+    <button class="delete" (click)="deleteUser(user.id)">X</button>
+  </li>
+</ul>

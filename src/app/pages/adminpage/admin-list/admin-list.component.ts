@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from 'src/app/shared/service/admin.service';
+import { UserService } from 'src/app/shared/service/user.service';
+import { User } from 'src/app/shared/class/user';
 
 @Component({
   selector: 'app-admin-list',
@@ -8,11 +9,11 @@ import { AdminService } from 'src/app/shared/service/admin.service';
 })
 export class AdminListComponent implements OnInit {
 
-  public adminList = [];
-  constructor(private adminService: AdminService) { }
+  public adminList: User[];
+  constructor(private userService: UserService) { }
 
-  ngOnInit() {
-    this.adminService.getList().subscribe(data => this.adminList = data);
+   ngOnInit() {
+    this.userService.getAll().subscribe(data => this.adminList = data.filter(x => x.isAdmin === true));
   }
 
 }

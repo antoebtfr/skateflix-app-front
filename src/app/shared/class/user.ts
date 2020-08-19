@@ -5,7 +5,7 @@ export class User {
     email: string;
     password: string;
     bio?: string;
-    age?: string;
+    age?: number;
     country?: string;
     region?: string;
     isAdmin: boolean;

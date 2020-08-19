@@ -1,0 +1,47 @@
+<section id="edit-body">
+    <div class="div-to-close-modal">
+
+    </div>
+
+        <div id="admin-user-edit">
+            <form id="editForm" [formGroup]="editForm">
+                <div id="surname-container">
+                    <label for="surname"> Nom de famille : </label>
+                    <input id="surname" name="surname" type="text" formControlName="surname">
+                </div>
+                <div id="firstname-container">
+                    <label for="firstname"> Prénom : </label>
+                    <input id="firstname" name="firstname" type="text" formControlName="firstname">
+                </div>
+                <div id="nickname-container">
+                    <label for="nickname"> Pseudo : </label>
+                    <input id="nickname" name="nickname" type="text" formControlName="nickname">
+                </div>
+                <div id="email-container">
+                    <label for="email"> Email : </label>
+                    <input id="email" name="email" type="email" formControlName="email">
+                </div>
+                <div id="password-container">
+                    <label for="password"> Mot de passe : </label>
+                    <input id="password" name="password" type="text" formControlName="password">
+                </div>
+                <div id="age-container">
+                    <label for="age"> Age : </label>
+                    <input id="age" name="age" type="number" formControlName="age">
+                </div>
+                <div id="country-container">
+                    <label for="country"> Pays: </label>
+                    <input id="country" name="country" type="number" formControlName="country">
+                </div>
+                <div id="region-container">
+                    <label for="region"> Région : </label>
+                    <input id="region" name="region" type="number" formControlName="region">
+                </div>
+            
+                <div class="full-width center">    
+                <button type="submit"> Enregistrer les modifications </button>
+                </div>
+            </form>
+        </div>
+
+</section>

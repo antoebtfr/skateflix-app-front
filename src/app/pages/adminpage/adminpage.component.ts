@@ -31,7 +31,4 @@ export class AdminpageComponent implements OnInit {
   this.cateListCSS.display = 'inline-block';
   }
 
-  public deleteUser(id: number) {
-    this.userService.deleteUser(id).subscribe();
-  }
 }
