@@ -1,0 +1,32 @@
+#smartphone-body{
+  background-color: red;
+  height: 93vh;
+  padding-top: 7vh;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2{
+  text-align: center;
+  font-size: 5vh;
+}
+
+.container{
+  height: 93%;
+  margin-top: 5vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  width: 100vw;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+button {
+  cursor:pointer;
+}

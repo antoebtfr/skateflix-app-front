@@ -1,11 +1,10 @@
 <section id="userlist-body">
   <ul>
-    <li>Mon compte</li>
-    <li>Crew</li>
-    <li>Informations légales</li>
-    <li>Applications Mobiles</li>
-    <li>Paramètre</li>
-    <li>Passer premium</li>
+    <li (click)="switchSettingsTabs('myprofil')" [routerLink]="['../settings']">Mon compte</li>
+    <li [routerLink]="['../informations']">Informations légales</li>
+    <li [routerLink]="['../smartphone-app']">Applications Mobiles</li>
+    <li (click)="switchSettingsTabs('myprofil')" [routerLink]="['../settings']">Paramètres</li>
+    <li (click)="switchSettingsTabs('premium')" [routerLink]="['../settings']">Passer premium</li>
     <li class="red" (click)="disconnect()">Déconnexion</li>
   </ul>
 </section>

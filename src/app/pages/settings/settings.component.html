@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<section id="settings-body">
+  <div id="list-container">
+    <ul>
+      <li
+        (click)="switchTab('myprofil')"
+        [ngClass]="isSelected === 'myprofil' ? 'isSelected' : ''"
+      >
+        Compte
+      </li>
+      <li
+        (click)="switchTab('notif')"
+        [ngClass]="isSelected === 'notif' ? 'isSelected' : ''"
+      >
+        Notifications
+      </li>
+      <li
+        (click)="switchTab('appcon')"
+        [ngClass]="isSelected === 'appcon' ? 'isSelected' : ''"
+      >
+        Appareils connectés
+      </li>
+      <li
+      (click)="switchTab('premium')"
+      [ngClass]="isSelected === 'premium' ? 'isSelected' : '' "
+      > Passer premium </li>
+      <li
+        (click)="switchTab('deleteacc')"
+        [ngClass]="isSelected === 'deleteacc' ? 'isSelected' : ''"
+      >
+        Supprimer le compte
+      </li>
+    </ul>
+  </div>
+
+  <section [ngSwitch]="isSelected" id="section-container">
+    <app-my-profil *ngSwitchCase="'myprofil'"></app-my-profil>
+    <app-app-connected *ngSwitchCase="'appcon'"></app-app-connected>
+    <app-delete-account *ngSwitchCase="'deleteacc'"></app-delete-account>
+    <app-notifications *ngSwitchCase="'notif'"></app-notifications>
+    <app-sett-premium *ngSwitchCase="'premium'"></app-sett-premium>
+  </section>
+</section>
