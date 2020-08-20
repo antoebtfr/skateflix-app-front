@@ -1,0 +1,29 @@
+section{
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chatbox{
+  width: 80vw;
+  height: 80vh;
+  border-radius: 20px;
+  border: solid 2px black;
+  overflow: hidden;
+}
+
+#screen{
+  height: 75vh;
+  background-color: grey;
+}
+
+#message{
+  width: 69vw;
+}
+
+button{
+  width: 10vw;
+}

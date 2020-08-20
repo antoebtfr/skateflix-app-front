@@ -8,6 +8,7 @@ import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { AdminSidebarComponent } from 'src/app/components/admin-sidebar/admin-sidebar.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatboxComponent } from './chatbox/chatbox.component';
 
 
 
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminpageComponent,
     AdminAuthComponent,
     AdminSidebarComponent,
-    AdminListComponent
+    AdminListComponent,
+    ChatboxComponent
   ],
 
   imports: [

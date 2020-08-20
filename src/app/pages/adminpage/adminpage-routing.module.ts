@@ -1,3 +1,4 @@
+import { ChatboxComponent } from './chatbox/chatbox.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'auth', component: AdminAuthComponent},
   { path: 'dashboard', component: AdminpageComponent},
   { path: 'ip', component: AdminSidebarComponent},
-  { path: 'admin-list', component: AdminListComponent}
+  { path: 'admin-list', component: AdminListComponent},
+  { path: 'chatbox', component: ChatboxComponent}
 ];
 
 @NgModule({
