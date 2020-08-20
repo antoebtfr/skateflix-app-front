@@ -13,7 +13,8 @@
     </div>
 
     <ul>
-      <li *ngFor="let us of user"> {{us}}</li>
+      <li *ngFor="let user of users"> {{user.id}} / {{user.surname}} / {{user.firstname}} / {{user.country}} 
+      </li>
     </ul>
 
   </div>

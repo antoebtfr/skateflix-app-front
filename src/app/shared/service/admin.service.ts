@@ -8,7 +8,7 @@ import { Admin } from '../class/admin';
 })
 export class AdminService {
 
-  private url = 'assets/data/fake-admin.json' ;
+  private url = '' ;
 
   constructor(private http: HttpClient) { }
 
