@@ -1,4 +1,5 @@
 <app-admin-sidebar></app-admin-sidebar>
+<app-admin-edit-modal *ngIf="getModalStatus()"></app-admin-edit-modal>
 
 <h2>Liste des utilisateurs</h2>
 
@@ -9,7 +10,7 @@
     <span *ngIf="!user.country"> (pays non renseigné) </span> /
     <span *ngIf="user.isPremium"> PREMIUM </span>
     <span *ngIf="!user.isPremium"> NON PREMIUM </span>
-    <button class="modify">Modifier</button>
+    <button class="modify" (click)="openModal()">Modifier</button>
     <button class="delete" (click)="deleteUser(user.id)">X</button>
   </li>
 </ul>

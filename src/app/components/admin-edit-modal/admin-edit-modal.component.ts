@@ -1,3 +1,4 @@
+import { ModalConf } from './../../variable-globale/modal-conf';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { User } from 'src/app/shared/class/user';
@@ -9,7 +10,7 @@ import { User } from 'src/app/shared/class/user';
 })
 export class AdminEditModalComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private modalConf: ModalConf) { }
 
   public editForm = this.fb.group({
     surname: [''],
@@ -28,4 +29,7 @@ export class AdminEditModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  public closeModal(){
+    this.modalConf.closeAdminUserEditModal();
+  }
 }

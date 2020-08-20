@@ -3,7 +3,7 @@
 
  <app-admin-sidebar></app-admin-sidebar>
 
-  <div class="content"> 
+  <div class="content">
     <h3> Last <span class="selected-cate" (click)="openCategoriesList()">{{selectedCategories}}</span> created </h3>
 
     <div id="categorie-list">
@@ -13,10 +13,10 @@
     </div>
 
     <ul>
-      <li *ngFor="let user of users"> {{user.id}} / {{user.surname}} / {{user.firstname}} / {{user.country}} 
+      <li *ngFor="let user of users"> {{user.id}} / {{user.surname}} / {{user.firstname}} / {{user.country}}
       </li>
     </ul>
 
   </div>
-  
+
 </section>

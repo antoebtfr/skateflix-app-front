@@ -1,3 +1,4 @@
+import { VideosListComponent } from './videos-list/videos-list.component';
 import { ChatboxComponent } from './chatbox/chatbox.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { NgModule } from '@angular/core';
@@ -13,9 +14,10 @@ const routes: Routes = [
   { path: 'auth', component: AdminAuthComponent},
   { path: 'dashboard', component: AdminpageComponent},
   { path: 'ip', component: AdminSidebarComponent},
-  { path: 'admin-list', component: AdminListComponent},
+  { path: 'admins-list', component: AdminListComponent},
   { path: 'chatbox', component: ChatboxComponent},
-  { path: 'users-list', component: UsersListComponent}
+  { path: 'users-list', component: UsersListComponent},
+  { path: 'videos-list', component: VideosListComponent}
 ];
 
 @NgModule({

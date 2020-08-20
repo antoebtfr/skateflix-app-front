@@ -4,6 +4,7 @@ export class ModalConf {
     private connectionModal = true; // true = Connection Modal - false = Inscription Modal
     private sidebar = false; // true = Sidebar open - false = Sidebar close
     private settingsTab: string;
+    private adminUserEditModal = false;
 
     public getConnectionModalStatus() {
         return this.connectionModal;
@@ -29,12 +30,25 @@ export class ModalConf {
         this.sidebar = false;
     }
 
-    public switchSettingsTab(tab: string){
+    public switchSettingsTab(tab: string) {
       this.settingsTab = tab;
     }
 
-    public getSettingsTab(){
+    public getSettingsTab() {
       return this.settingsTab;
     }
+
+    public getAdminUserEditStatus() {
+      return this.adminUserEditModal;
+    }
+
+    public openAdminUserEditModal() {
+      this.adminUserEditModal = true;
+    }
+
+    public closeAdminUserEditModal() {
+      this.adminUserEditModal = false;
+    }
+
     // NEEDFIX: OBSERVABLE
 }
