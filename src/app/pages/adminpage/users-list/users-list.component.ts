@@ -1,3 +1,4 @@
+import { AdminUserService } from './../../../shared/service/admin-user.service';
 import { ModalConf } from './../../../variable-globale/modal-conf';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/service/user.service';
@@ -10,7 +11,7 @@ import { User } from 'src/app/shared/class/user';
 })
 export class UsersListComponent implements OnInit {
 
-  constructor(private userService: UserService, private modalConf: ModalConf) { }
+  constructor(private userService: UserService, private modalConf: ModalConf, private adminService: AdminUserService) { }
 
   public users: User[];
   ngOnInit() {
@@ -22,11 +23,18 @@ export class UsersListComponent implements OnInit {
     this.userService.deleteUser(id).subscribe();
   }
 
-  public getModalStatus(){
+  public getModalStatus() {
     return this.modalConf.getAdminUserEditStatus();
   }
 
-  public openModal(){
+  public openModal(user: User) {
     this.modalConf.openAdminUserEditModal();
+    this.changeEditedUser(user);
   }
+
+  private changeEditedUser(user: User) {
+    this.adminService.modifyEditedUser(user);
+  }
+
 }
+

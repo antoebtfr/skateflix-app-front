@@ -10,7 +10,7 @@
     <span *ngIf="!user.country"> (pays non renseigné) </span> /
     <span *ngIf="user.isPremium"> PREMIUM </span>
     <span *ngIf="!user.isPremium"> NON PREMIUM </span>
-    <button class="modify" (click)="openModal()">Modifier</button>
+    <button class="modify" (click)="openModal(user)">Modifier</button>
     <button class="delete" (click)="deleteUser(user.id)">X</button>
   </li>
 </ul>
