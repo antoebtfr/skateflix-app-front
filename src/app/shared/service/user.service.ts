@@ -20,4 +20,8 @@ export class UserService {
     document.location.reload();
     return this.http.delete(this.URL + `/${id}`);
   }
+
+  public modifyUser(id: number, user): Observable<any> {
+    return this.http.put(this.URL + `/${id}`, user);
+  }
 }

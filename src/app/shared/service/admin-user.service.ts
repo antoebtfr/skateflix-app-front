@@ -9,17 +9,19 @@ export class AdminUserService {
 
   constructor() { }
 
-  private surname = 'Wesh';
-  private firstname = 'La team';
-  private age = 13;
-  private nickname = 'SuperkIller';
-  private country = 'France';
-  private region = 'Gironde';
-  private isAdmin = false;
-  private isPremium = false;
+  private id: number;
+  private surname: string;
+  private firstname: string;
+  private age: number;
+  private nickname: string;
+  private country: string;
+  private region: string;
+  private isAdmin: boolean;
+  private isPremium: boolean;
 
 
   public modifyEditedUser(user: User) {
+    this.id = user.id;
     this.firstname = user.firstname;
     this.surname = user.surname;
     this.nickname = user.nickname;
@@ -31,6 +33,7 @@ export class AdminUserService {
 
   public getEditedUserInfo(): User {
     const user = {
+      id: this.id,
       firstname: this.firstname,
       surname: this.surname,
       nickname: this.nickname,
