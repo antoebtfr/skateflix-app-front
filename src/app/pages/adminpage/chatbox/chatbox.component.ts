@@ -13,6 +13,7 @@ export class ChatboxComponent implements OnInit, AfterViewInit {
   @ViewChild('message', {static: false}) private messageHTML;
   @ViewChild('btnSend', {static: false}) private sendButtonHTML;
   @ViewChild('screen', {static: false}) private screenHTML;
+  @ViewChild('handler', {static: false}) private handlerHMTL;
 
   ngOnInit() {
   }
@@ -21,6 +22,7 @@ export class ChatboxComponent implements OnInit, AfterViewInit {
     this.messageHTML = this.messageHTML.nativeElement;
     this.sendButtonHTML = this.sendButtonHTML.nativeElement;
     this.screenHTML = this.screenHTML.nativeElement;
+    this.handlerHMTL = this.handlerHMTL.nativeElement;
     console.log(this.messageHTML, this.sendButtonHTML, this.screenHTML);
     this.webSocket();
   }
@@ -30,12 +32,20 @@ export class ChatboxComponent implements OnInit, AfterViewInit {
       console.log(this.messageHTML.value);
       this.websocketService.emit('chat', {
         message: this.messageHTML.value,
+        handler: this.handlerHMTL.value
       });
       this.messageHTML.value = '';
     });
 
     this.websocketService.listen('chat', (data) => {
-      this.screenHTML.innerHTML += `<p> UTILISATEUR : ${data.message} </p>`;
+/*       const newParagraphe = document.createElement('p');
+      const newContent = document.createTextNode(data.message);
+      newParagraphe.appendChild(newContent);
+
+      const currentDiv = document.getElementById('message');
+      document.body.insertBefore(newParagraphe, currentDiv); */
+
+      this.screenHTML.innerHTML += `<p> ${data.handler} : ${data.message} </p>`;
     });
   }
 

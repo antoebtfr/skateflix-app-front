@@ -1,7 +1,10 @@
 section{
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-image: url(https://media.istockphoto.com/photos/bright-blue-defocused-blurred-motion-abstract-background-picture-id1047234038?k=6&m=1047234038&s=612x612&w=0&h=O1lP8GIn46sboZL5bnMsznd4A1tRNJ7iXm1MMVh5I5c=);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,14 +19,24 @@ section{
 }
 
 #screen{
-  height: 75vh;
-  background-color: grey;
+  height: 73vh;
+  background-color: rgba(128, 128, 128, 0.411);
+  padding-left: 20px;
+  padding-top: 1vh;
 }
 
 #message{
   width: 69vw;
 }
 
+#handler{
+  width: 100vw;
+}
+
+p{
+  color: orange;
+}
+
 button{
-  width: 10vw;
+  width: 10.4vw;
 }
