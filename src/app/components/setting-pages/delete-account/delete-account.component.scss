@@ -1,14 +1,19 @@
 #delete-body{
   height: 93vh;
-  background-color: pink;
-  color: white;
+  background-image: url(../../../../assets/data/img/skate_wp_2.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
+#container{
+  height: 100vh;
+  background-color: rgba(34, 34, 34, 0.733);
+  color: white;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 10vh;
   display: flex;
   flex-flow: row wrap;
-
 }
 
 div{
@@ -19,7 +24,6 @@ div{
   text-align: center;
 
 }
-
 
 button{
   width: 17vw;

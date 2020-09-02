@@ -8,6 +8,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: wrap column;
 }
 
 #chatbox{
@@ -39,4 +40,9 @@ p{
 
 button{
   width: 10.4vw;
+}
+
+h2{
+  color: white;
+  font-size: 2em;
 }
