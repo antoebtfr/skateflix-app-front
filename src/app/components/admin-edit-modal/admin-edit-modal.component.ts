@@ -86,8 +86,13 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
 
     // Send a number instead of a string
     if (user.age === '') {
-      console.log('yes');
       user.age = -1;
+    }
+
+    // Don't request if not touched
+    if (this.editForm.touched === false) {
+      this.closeModal();
+      return ;
     }
     document.location.reload();
     this.userService.modifyUser(this.id, user).subscribe(data => user = data);
