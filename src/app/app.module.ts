@@ -34,7 +34,6 @@ import { UserConf } from './variable-globale/user-conf';
     DocumentaryComponent,
     LocalsComponent,
     CategoriesComponent,
-
     ],
   imports: [
     BrowserModule,

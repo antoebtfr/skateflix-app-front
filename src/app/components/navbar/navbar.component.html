@@ -9,7 +9,7 @@
     <li (click)="openSidebar()" *ngIf="!connectedStatus()">Connexion</li>
     <li *ngIf='connectedStatus()' [routerLink]="['../user']">Profil</li>
     <li>Mes abonnements</li>
-    <li>Poster</li>
+    <li [routerLink]="['../post-video']">Poster</li>
     <li><input type="text" id="nav-searchbar" placeholder="Rechercher"></li>
     <li *ngIf="connectedStatus()" (click)="showUserList()"> <i class="material-icons">
       person

@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+
+<section id="body-post-video">
+    <p> Je suis le texte censé etre vu </p>
+    <input type='file' (change)="handleFileInput($event.target.files)">
+    <input type="button" value="Check File" (click)="checkFile()">
+    <button (click)="uploadFileToActivity()"> Poster la vidéo </button>
+</section>

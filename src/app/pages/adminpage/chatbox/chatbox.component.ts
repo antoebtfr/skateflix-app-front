@@ -21,7 +21,6 @@ export class ChatboxComponent implements OnInit, AfterViewInit {
     this.messageHTML = this.messageHTML.nativeElement;
     this.sendButtonHTML = this.sendButtonHTML.nativeElement;
     this.screenHTML = this.screenHTML.nativeElement;
-    console.log(this.messageHTML, this.sendButtonHTML, this.screenHTML);
     this.webSocket();
   }
 
@@ -35,7 +34,7 @@ export class ChatboxComponent implements OnInit, AfterViewInit {
     });
 
     this.websocketService.listen('chat', (data) => {
-      this.screenHTML.innerHTML += `<p> UTILISATEUR : ${data.message} </p>`;
+      this.screenHTML.innerHTML += `<p> Utilisateur : ${data.message} </p>`;
     });
   }
 
