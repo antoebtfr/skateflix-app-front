@@ -8,10 +8,10 @@ export class VideoService {
 
   constructor(private http: HttpClient) { }
 
-  private URL = 'http://localhost:5030/file';
+  private URL = 'http://localhost:3000/video';
 
  public postFile(fileToUpload: File) {
-    const endpoint = this.URL + '/13';
+    const endpoint = this.URL + '/2';
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
     return this.http
