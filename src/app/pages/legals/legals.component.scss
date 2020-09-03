@@ -1,4 +1,20 @@
 #legals-body{
+  width: 100vw;
+  height: 100vh;
+  background-image:url(../../../assets/data/img/skate_wp_4.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+
+#container{
+  background-color: rgba(34, 34, 34, 0.822);
+  width: 100vw;
   height: 93vh;
-  padding: 10vh 4vw 0 4vw;
+  padding: 10vh 10vw 1vw 4vw;
+}
+
+p{
+  padding-right: 10vw;
 }
