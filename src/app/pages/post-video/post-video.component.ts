@@ -41,7 +41,7 @@ export class PostVideoComponent implements OnInit, AfterViewInit {
 
     this.videoService.postFile(objectToSend).subscribe(data => {}, err => console.log(err));
 
-    console.log('Le fichier a bien été envoyé');
+    alert('Le fichier a bien été envoyé');
   }
 
   public checkFile() {

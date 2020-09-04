@@ -1,7 +1,44 @@
 #body-post-video{
     width: 100vw;
     height: 93vh;
-    background-color: green;
+    background-image: url(../../../assets/data/img/skate_wp_6.jpeg);
+    background-size: cover;
     padding-top: 7vh;
+
 }
 
+#file-input{
+    color: white;
+}
+
+#keys-container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#post-video-btn{
+    cursor: pointer;
+    width: 15vw;
+}
+
+#grey-background{
+    background-color: rgba(51, 51, 51, 0.562);
+    width: 100vw;
+    height: 93vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+input
+{
+    width:25vw;
+}

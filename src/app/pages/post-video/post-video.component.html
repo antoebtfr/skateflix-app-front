@@ -1,14 +1,20 @@
 <app-navbar></app-navbar>
 
 <section id="body-post-video">
-    <input type='file' (change)="handleFileInput($event.target.files)">
+    <div id="grey-background">
+        <div id="container">
+    <input id="file-input" class="input" type='file' (change)="handleFileInput($event.target.files)">
 
-    <input type="text" placeholder="Nom de la vidéo" #videoName>
-     <select name="category-select" id="category-select" (change)="handleFileCategory($event.target.value)">
+    <div id="keys-container">
+    <input class="input" id="video-name" type="text" placeholder="Nom de la vidéo" #videoName>
+     <select class="input" name="category-select" id="category-select" (change)="handleFileCategory($event.target.value)">
          <option value=""> -- Sélectionnez une catégorie -- </option>
          <option value="documentaire">Documentaire</option>
          <option value="fun">Fun</option>
          <option value="video professionnelle">Vidéo professionnelle</option>
      </select>
-    <button (click)="uploadFileToActivity()"> Poster la vidéo </button>
+    </div>
+    <button id="post-video-btn" (click)="uploadFileToActivity()"> Poster la vidéo </button>
+</div>   
+</div>
 </section>
