@@ -1,6 +1,10 @@
 <section class="section-body" id="documentary-body">
     <h2 class="section-title" id="documentary-title"> Documentaires </h2>
     <div class="video-container">
-        <div *ngFor="let video of documentaryVideos" class="documentary-video"> {{video}} </div>
+        <div *ngFor="let video of testArray" class="documentary-video"> 
+            <video width="200" height="80" controls>
+                <source src="http://localhost:3000/{{video.link}}">
+            </video>
+        </div>
     </div>
 </section>
