@@ -13,11 +13,17 @@
 >
   <div id="promo-video-container">
     <article id="promo-video">
-      <iframe src="https://www.youtube.com/embed/XBgbBrxj2to?controls=0&&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--       <video width="300" controls>
+        <source src="http://localhost:3000/{{topVideo.link}}">
+      </video> -->
     </article>
     <div id="promo-video-infos">
 
     </div>
   </div>
-  <div class="video-test" *ngFor="let video of testArray"></div>
+  <div id="video-list-container">
+  <video class="video-test" *ngFor="let video of videoList" width='200' controls>
+    <source src="http://localhost:3000/{{video.link}}">
+  </video>
+</div>
 </div>
