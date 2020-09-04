@@ -5,6 +5,7 @@ export class ModalConf {
     private sidebar = false; // true = Sidebar open - false = Sidebar close
     private settingsTab: string;
     private adminUserEditModal = false;
+    private userEditModal = false;
 
     public getConnectionModalStatus() {
         return this.connectionModal;
@@ -48,6 +49,18 @@ export class ModalConf {
 
     public closeAdminUserEditModal() {
       this.adminUserEditModal = false;
+    }
+
+    public openUserEditModal() {
+      this.userEditModal = true;
+    }
+
+    public closeUserEditModal() {
+      this.userEditModal = false;
+    }
+
+    public getUserEditModalStatus() {
+      return this.userEditModal;
     }
 
     // NEEDFIX: OBSERVABLE

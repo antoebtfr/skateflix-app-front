@@ -1,0 +1,43 @@
+#edit-body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-to-close-modal{
+    width: 100%;
+    height: 100%;
+    background-color: #212121b3;
+    position: fixed;
+}
+
+#admin-user-edit{
+    width: 90vw;
+    height: 80vh;
+    background-color: rgb(17, 14, 14);
+    padding: 10px;
+    z-index: 10;
+    display: flex;
+    flex-flow: wrap row;
+    color: white;
+    border-radius: 10px;
+}
+
+.full-width{
+    width: 90vw;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editForm{
+    display: flex;
+    flex-flow: wrap row;
+    align-items: center; 
+    justify-content: space-between;
+}

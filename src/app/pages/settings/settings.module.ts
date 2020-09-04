@@ -9,14 +9,25 @@ import { AppConnectedComponent } from '../../components/setting-pages/app-connec
 import { NotificationsComponent } from './../../components/setting-pages/notifications/notifications.component';
 import { DeleteAccountComponent } from '../../components/setting-pages/delete-account/delete-account.component';
 import { SettPremiumComponent } from '../../components/setting-pages/sett-premium/sett-premium.component';
-
+import { EditUserComponent } from 'src/app/components/settings-pages/edit-user/edit-user.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SettingsComponent, MyProfilComponent, AppConnectedComponent, NotificationsComponent, DeleteAccountComponent, SettPremiumComponent],
+  declarations: [
+    SettingsComponent,
+    MyProfilComponent,
+    AppConnectedComponent,
+    NotificationsComponent,
+    DeleteAccountComponent,
+    SettPremiumComponent,
+    EditUserComponent
+
+  ],
   imports: [
     CommonModule,
     SettingsRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class SettingsModule { }

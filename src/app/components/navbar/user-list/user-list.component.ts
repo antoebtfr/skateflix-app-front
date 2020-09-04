@@ -1,6 +1,7 @@
 import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { UserConf } from 'src/app/variable-globale/user-conf';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -9,13 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor(private userConf: UserConf, private modalConf: ModalConf) { }
+  constructor(private userConf: UserConf, private modalConf: ModalConf, private router: Router) { }
 
   ngOnInit() {
   }
 
   public disconnect() {
     this.userConf.disconnect();
+    this.router.navigateByUrl('');
   }
 
   public switchSettingsTabs(tab: string) {

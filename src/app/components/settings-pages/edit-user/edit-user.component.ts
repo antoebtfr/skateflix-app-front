@@ -1,20 +1,20 @@
-import { UserService } from './../../shared/service/user.service';
-import { AdminUserService } from './../../shared/service/admin-user.service';
-import { ModalConf } from './../../variable-globale/modal-conf';
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { FormBuilder } from '@angular/forms';
+import { ModalConf } from 'src/app/variable-globale/modal-conf';
+import { AdminUserService } from 'src/app/shared/service/admin-user.service';
+import { UserService } from 'src/app/shared/service/user.service';
+import { UserConf } from 'src/app/variable-globale/user-conf';
 
 @Component({
-  selector: 'app-admin-edit-modal',
-  templateUrl: './admin-edit-modal.component.html',
-  styleUrls: ['./admin-edit-modal.component.scss']
+  selector: 'app-edit-user',
+  templateUrl: './edit-user.component.html',
+  styleUrls: ['./edit-user.component.scss']
 })
-export class AdminEditModalComponent implements OnInit, AfterViewInit {
+export class EditUserComponent implements OnInit, AfterViewInit {
   constructor(
     private fb: FormBuilder,
     private modalConf: ModalConf,
-    private adminservice: AdminUserService,
+    private userConf: UserConf,
     private userService: UserService
   ) {}
 
@@ -40,7 +40,7 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    const user = this.adminservice.getEditedUserInfo();
+    const user = this.userConf.getUserInfo();
 
     this.surnameHTML = this.surnameHTML.nativeElement;
     this.firsnameHTML = this.firsnameHTML.nativeElement;
@@ -56,26 +56,26 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
       firstname: [user.firstname],
       nickname: [user.nickname],
       age: [user.age],
-      country: [user.country],
-      region: [user.region],
+      country: [user.nationality],
+      region: [user.location],
     });
 
     this.updateInputs();
   }
 
   public closeModal() {
-    this.modalConf.closeAdminUserEditModal();
+    this.modalConf.closeUserEditModal();
   }
 
   private updateInputs() { // Update the input values
-    const user = this.adminservice.getEditedUserInfo();
+    const user = this.userConf.getUserInfo();
 
     this.surnameHTML.value = user.surname;
     this.firsnameHTML.value = user.firstname;
     this.nicknameHTML.value = user.nickname;
     this.ageHTML.value = user.age;
-    this.countryHTML.value = user.country;
-    this.regionHTML.value = user.region;
+    this.countryHTML.value = user.nationality;
+    this.regionHTML.value = user.location;
     this.id = user.id;
   }
 

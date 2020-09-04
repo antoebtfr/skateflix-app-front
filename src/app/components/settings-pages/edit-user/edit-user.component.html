@@ -1,0 +1,40 @@
+<section id="edit-body">
+    <div class="div-to-close-modal" (click)="closeModal()">
+
+    </div>
+
+        <div id="admin-user-edit">
+            <form id="editForm" [formGroup]="editForm">
+                <div id="surname-container">
+                    <label for="surname"> Nom de famille : </label>
+                    <input id="surname" name="surname" type="text" formControlName="surname" #surname>
+                </div>
+                <div id="firstname-container">
+                    <label for="firstname"> Prénom : </label>
+                    <input id="firstname" name="firstname" type="text" formControlName="firstname" #firstname>
+                </div>
+                <div id="nickname-container">
+                    <label for="nickname"> Pseudo : </label>
+                    <input id="nickname" name="nickname" type="text" formControlName="nickname" #nickname>
+                </div>
+
+                <div id="age-container">
+                    <label for="age"> Age : </label>
+                    <input id="age" name="age" type="number" formControlName="age" #age>
+                </div>
+                <div id="country-container">
+                    <label for="country"> Pays: </label>
+                    <input id="country" name="country" type="text" formControlName="country" #country>
+                </div>
+                <div id="region-container">
+                    <label for="region"> Région : </label>
+                    <input id="region" name="region" type="text" formControlName="region" #region>
+                </div>
+
+                <div class="full-width center">
+                <button type="submit" (click)="sendData()"> Enregistrer les modifications </button>
+                </div>
+            </form>
+        </div>
+
+</section>
