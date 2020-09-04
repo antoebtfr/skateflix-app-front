@@ -36,11 +36,10 @@ export class PostVideoComponent implements OnInit, AfterViewInit {
     const objectToSend = {
       file: this.fileToUpload,
       category: this.fileToUploadCategory,
-      videoname: this.videoNameInputHTML
+      videoname: this.videoNameInputHTML.value
     };
 
-    this.videoService.postFile(this.fileToUpload, this.fileToUploadCategory, this.videoNameInputHTML)
-    .subscribe(data => {}, err => console.log(err));
+    this.videoService.postFile(objectToSend).subscribe(data => {}, err => console.log(err));
 
     console.log('Le fichier a bien été envoyé');
   }
