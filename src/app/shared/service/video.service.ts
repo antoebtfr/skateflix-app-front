@@ -10,8 +10,8 @@ export class VideoService {
 
   private URL = 'http://localhost:3000/video';
 
- public postFile(fileToUpload: File) {
-    const endpoint = this.URL + '/2';
+ public postFile(fileToUpload: File, category: string, videoname: string) {
+    const endpoint = `${this.URL}/2/${category}/${videoname}` ;
     const formData: FormData = new FormData();
     formData.append('file', fileToUpload, fileToUpload.name);
     return this.http
