@@ -11,6 +11,8 @@
         <button type="submit" id="connection-btn" (click)="sendUser()"
             [disabled]="connectionForm.pristine">Connexion</button>
     </form>
+
+    <p *ngIf="error" class="notif-error"> L'email et/ou le mot de passe entrés semblent être incorrects </p>
     <p>Pas encore inscrit? Inscris-toi en cliquant <span (click)="switch()">ici</span></p>
 
 </section>

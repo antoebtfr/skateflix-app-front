@@ -25,6 +25,7 @@ export class ConnectionFormComponent implements OnInit {
   });
 
   public submitted = false;
+  public error: boolean;
 
   ngOnInit() {
   }
@@ -51,7 +52,10 @@ export class ConnectionFormComponent implements OnInit {
       console.log(data);
       this.userConf.updateCurrentUser(data);
       this.userConf.connection();
-    }, err => { throw new Error('something bad happened'); });
+    }, err => {
+      this.error = true;
+      throw new Error('something bad happened');
+    });
 
 
 

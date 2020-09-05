@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserConf } from 'src/app/variable-globale/user-conf';
 
 @Component({
   selector: 'app-categories',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userConf: UserConf) { }
 
   ngOnInit() {
+  }
+
+  public isConnected(){
+    return this.userConf.getConnexionStatus();
   }
 
 }
