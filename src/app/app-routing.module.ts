@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: '404-not-found' , loadChildren: () => import('./pages/page-not-found/page-not-found.module').then(m => m.PageNotFoundModule) },
   { path: 'user', canActivate: [AuthGuard], loadChildren: () => import('./pages/profil/profil.module').then(m => m.ProfilModule) },
   { path: 'admin', loadChildren: () => import('./pages/adminpage/adminpage.module').then(m => m.AdminpageModule) },
-  { path: 'settings', /* canActivate: [AuthGuard], */
+  { path: 'settings', canActivate: [AuthGuard],
   loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsModule)
   },
   { path: 'smartphone-app', loadChildren: () => import('./pages/smartphone-app/smartphone-app.module').then(m => m.SmartphoneAppModule) },

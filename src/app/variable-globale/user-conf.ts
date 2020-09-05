@@ -14,6 +14,7 @@ export class UserConf {
   private userId = 2;
   private userBio = 'Salut, je suis la bio de pieerot';
   private userProfilPicture = 'https://nyjah.com/wp-content/uploads/2018/01/C_v2RQkWAAQ-4c3.jpg';
+  private userIsPremium = false;
 
   public getConnexionStatus() { // Retrieve the status of the connected variable
     return this.connected;
@@ -37,7 +38,8 @@ export class UserConf {
       region: this.userLocation,
       country: this.userNationality,
       profilPicture: this.userProfilPicture,
-      bio: this.userBio
+      bio: this.userBio,
+      isPremium: this.userIsPremium
     };
 
     return user;
