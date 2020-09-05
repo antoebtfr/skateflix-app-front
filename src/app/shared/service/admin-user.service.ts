@@ -9,6 +9,8 @@ export class AdminUserService {
 
   constructor() { }
 
+  private isConnected = false;
+
   private id: number;
   private surname: string;
   private firstname: string;
@@ -33,7 +35,7 @@ export class AdminUserService {
   }
 
 
-  public getEditedUserInfo(): User {
+  public getEditedUserInfo() {
     const user = {
       id: this.id,
       firstname: this.firstname,

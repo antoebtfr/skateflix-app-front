@@ -31,4 +31,13 @@ p{
 
 button {
   cursor:pointer;
+  background-color: rgba(47, 47, 47, 0.459);
+  border: solid 1px white;
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.disabled{
+  cursor: not-allowed;
 }

@@ -15,6 +15,7 @@ export class UserConf {
   private userBio = 'Salut, je suis la bio de pieerot';
   private userProfilPicture = 'https://nyjah.com/wp-content/uploads/2018/01/C_v2RQkWAAQ-4c3.jpg';
   private userIsPremium = false;
+  private userIsAdmin = false;
 
   public getConnexionStatus() { // Retrieve the status of the connected variable
     return this.connected;
@@ -26,6 +27,10 @@ export class UserConf {
 
   public connection() { // Switch the site in Connected Mode
     this.connected = true;
+
+    if (this.userIsAdmin === true) {
+      localStorage.setItem('ISADMIN', 'azertyuiop'); // Understandable key and value for demo
+    }
   }
 
   public getUserInfo() {
@@ -55,5 +60,6 @@ export class UserConf {
     this.userLocation = user.region;
     this.userId = user.id;
     this.userBio = user.bio;
+    this.userIsAdmin = user.isAdmin;
   }
 }
