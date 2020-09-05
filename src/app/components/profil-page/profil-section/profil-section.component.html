@@ -12,7 +12,7 @@
     <h2>{{currentUser.surname}}</h2>
     <h3 *ngIf="currentUser.nickname.length > 0">{{currentUser.nickname}}</h3>
   </div>
-  <h2> {{currentUser.age}} <span> ans</span></h2>
+  <h2 *ngIf="currentUser.age"> {{currentUser.age}} <span> ans</span></h2>
   <div class="user-nationality"> {{currentUser.nationality}}</div>
   <div class="user-description">
     {{currentUser.bio}}

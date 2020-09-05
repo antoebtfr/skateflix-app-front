@@ -14,11 +14,14 @@ export class PostVideoComponent implements OnInit, AfterViewInit {
   private fileToUpload: File;
   private fileToUploadCategory: string;
   private id: number;
+  private location: string;
 
   @ViewChild('videoName', {static: false}) private videoNameInputHTML;
 
   ngOnInit() {
     this.id = this.userConf.getUserInfo().id;
+    this.location = this.userConf.getUserInfo().region;
+    console.log(this.location);
     console.log(this.id);
   }
 
@@ -41,7 +44,8 @@ export class PostVideoComponent implements OnInit, AfterViewInit {
       file: this.fileToUpload,
       category: this.fileToUploadCategory,
       videoname: this.videoNameInputHTML.value,
-      userId: this.id
+      userId: this.id,
+      location: this.location
     };
 
     this.videoService.postFile(objectToSend).subscribe(data => {}, err => console.log(err));

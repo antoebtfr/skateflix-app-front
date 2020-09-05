@@ -38,8 +38,12 @@ export class InscriptionFormComponent implements OnInit {
 
     if (this.inscriptionForm.valid) {
       console.log(this.inscriptionForm.value);
-      this.authService.signUp(this.inscriptionForm.value).subscribe(data => {}, err => console.log(err));
-      this.inscriptionForm.reset();
+      this.authService.signUp(this.inscriptionForm.value)
+      .subscribe(data => {
+        alert('La création du compte a été effectué. Veuillez confirmer la validation de votre compte');
+        this.inscriptionForm.reset();
+      },
+        err => alert('Email déjà utilisée'));
     }
   }
 }
