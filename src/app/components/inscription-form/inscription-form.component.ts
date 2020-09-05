@@ -1,3 +1,4 @@
+import { AuthService } from './../../shared/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalConf } from 'src/app/variable-globale/modal-conf';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -9,7 +10,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class InscriptionFormComponent implements OnInit {
 
-  constructor(private modalConf: ModalConf, private fb: FormBuilder) { }
+  constructor(
+    private modalConf: ModalConf,
+    private fb: FormBuilder,
+    private authService: AuthService
+    ) { }
 
   public inscriptionForm = this.fb.group({
     firstname: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
@@ -33,6 +38,7 @@ export class InscriptionFormComponent implements OnInit {
 
     if (this.inscriptionForm.valid) {
       console.log(this.inscriptionForm.value);
+      this.authService.signUp(this.inscriptionForm.value).subscribe(data => {}, err => console.log(err));
       this.inscriptionForm.reset();
     }
   }

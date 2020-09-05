@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserConf {
-  private connected = false; // Variable managing the switch to connected / not connected mode of the site
+  private connected = true; // Variable managing the switch to connected / not connected mode of the site
 
   private userFirstname = 'Pierre';
   private userSurname = 'Croce';
