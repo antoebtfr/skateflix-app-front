@@ -24,6 +24,8 @@ export class EditUserComponent implements OnInit, AfterViewInit {
   @ViewChild('age', { static: false }) private ageHTML;
   @ViewChild('country', { static: false }) private countryHTML;
   @ViewChild('region', { static: false }) private regionHTML;
+  @ViewChild('img', { static: false }) private imgHTML;
+
   private id: number;
 
   // Initialize the form
@@ -35,6 +37,7 @@ export class EditUserComponent implements OnInit, AfterViewInit {
     age: [''],
     country: [''],
     region: [''],
+    profilPicture: ['']
   });
 
   ngOnInit() {}
@@ -48,6 +51,7 @@ export class EditUserComponent implements OnInit, AfterViewInit {
     this.ageHTML = this.ageHTML.nativeElement;
     this.countryHTML = this.countryHTML.nativeElement;
     this.regionHTML = this.regionHTML.nativeElement;
+    this.imgHTML = this.imgHTML.nativeElement;
 
     // Update the form values
 
@@ -58,6 +62,7 @@ export class EditUserComponent implements OnInit, AfterViewInit {
       age: [user.age],
       country: [user.country],
       region: [user.region],
+      profilPicture: [user.profilPicture]
     });
 
     this.updateInputs();
@@ -77,6 +82,7 @@ export class EditUserComponent implements OnInit, AfterViewInit {
     this.countryHTML.value = user.country;
     this.regionHTML.value = user.region;
     this.id = user.id;
+    this.imgHTML = user.profilPicture;
   }
 
   public modifiyUser() {
