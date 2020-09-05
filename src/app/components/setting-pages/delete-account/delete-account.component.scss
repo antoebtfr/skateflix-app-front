@@ -29,4 +29,18 @@ button{
   width: 17vw;
   height: 40px;
   cursor: pointer;
+  background-color: rgb(39, 39, 39);
+  color: white;
+  border: solid 1px white;
+  border-radius: 10px;
+}
+
+
+.disabled{
+  cursor: not-allowed;
+  background-color: rgb(39, 39, 39, 0.3);
+}
+
+.red{
+  background-color: rgb(63, 8, 8);
 }

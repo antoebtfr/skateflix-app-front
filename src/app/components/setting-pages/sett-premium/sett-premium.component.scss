@@ -24,3 +24,19 @@
 .text{
   text-align: center;
 }
+
+button{
+    width: 17vw;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(141, 141, 141, 0.089);
+    color: white;
+    border: solid 1px white;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+  }
+
+button:hover{
+  background-color: rgba(26, 111, 151, 0.541);
+}
+

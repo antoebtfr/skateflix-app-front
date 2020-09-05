@@ -56,8 +56,8 @@ export class EditUserComponent implements OnInit, AfterViewInit {
       firstname: [user.firstname],
       nickname: [user.nickname],
       age: [user.age],
-      country: [user.nationality],
-      region: [user.location],
+      country: [user.country],
+      region: [user.region],
     });
 
     this.updateInputs();
@@ -74,14 +74,15 @@ export class EditUserComponent implements OnInit, AfterViewInit {
     this.firsnameHTML.value = user.firstname;
     this.nicknameHTML.value = user.nickname;
     this.ageHTML.value = user.age;
-    this.countryHTML.value = user.nationality;
-    this.regionHTML.value = user.location;
+    this.countryHTML.value = user.country;
+    this.regionHTML.value = user.region;
     this.id = user.id;
   }
 
-  public sendData() {
+  public modifiyUser() {
 
     let user = this.editForm.value;
+    console.log(user);
 
     // Send a number instead of a string
     if (user.age === '') {
