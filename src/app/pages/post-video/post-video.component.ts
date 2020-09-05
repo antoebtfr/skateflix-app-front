@@ -1,3 +1,4 @@
+import { UserConf } from 'src/app/variable-globale/user-conf';
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { VideoService } from 'src/app/shared/service/video.service';
 
@@ -8,14 +9,17 @@ import { VideoService } from 'src/app/shared/service/video.service';
 })
 export class PostVideoComponent implements OnInit, AfterViewInit {
 
-  constructor(private videoService: VideoService) { }
+  constructor(private videoService: VideoService, private userConf: UserConf) { }
 
   private fileToUpload: File;
   private fileToUploadCategory: string;
+  private id: number;
 
   @ViewChild('videoName', {static: false}) private videoNameInputHTML;
 
   ngOnInit() {
+    this.id = this.userConf.getUserInfo().id;
+    console.log(this.id);
   }
 
   ngAfterViewInit() {
@@ -36,7 +40,8 @@ export class PostVideoComponent implements OnInit, AfterViewInit {
     const objectToSend = {
       file: this.fileToUpload,
       category: this.fileToUploadCategory,
-      videoname: this.videoNameInputHTML.value
+      videoname: this.videoNameInputHTML.value,
+      userId: this.id
     };
 
     this.videoService.postFile(objectToSend).subscribe(data => {}, err => console.log(err));

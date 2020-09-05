@@ -43,9 +43,15 @@ export class UserConf {
     return user;
   }
 
-  public updateCurrentUser(user: User) {
+  public updateCurrentUser(user) {
     this.userFirstname = user.firstname;
     this.userSurname = user.surname;
     this.userProfilPicture = user.profilPicture;
+    this.userNickname = user.nickname;
+    this.userAge = user.age;
+    this.userNationality = user.country;
+    this.userLocation = user.region;
+    this.userId = user.id;
+    this.userBio = user.bio;
   }
 }
