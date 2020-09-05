@@ -30,6 +30,22 @@
                     <label for="region"> Région : </label>
                     <input id="region" name="region" type="text" formControlName="region" #region>
                 </div>
+                <div id="isAdmin-container">
+                    <label for="isAdmin"> Administrateur : </label>
+                    <select id="isAdmin" name="isAdmin" type="text" formControlName="isAdmin" #isAdmin>
+                      <option value="true">True</option>
+                      <option value="false">False</option>
+                    </select>
+                </div>
+
+                <div id="isPremium-container">
+                    <label for="isPremium"> Premium : </label>
+                    <select id="isPremium" name="isPremium" type="text" formControlName="isPremium" #isPremium>
+                      <option value="true">True</option>
+                      <option value="false">False</option>
+                    </select>
+                </div>
+
 
                 <div class="full-width center">
                 <button type="submit" (click)="sendData()"> Enregistrer les modifications </button>

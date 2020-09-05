@@ -24,6 +24,8 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
   @ViewChild('age', { static: false }) private ageHTML;
   @ViewChild('country', { static: false }) private countryHTML;
   @ViewChild('region', { static: false }) private regionHTML;
+  @ViewChild('isAdmin', { static: false }) private isAdminHTML;
+  @ViewChild('isPremium', { static: false }) private isPremiumHTML;
   private id: number;
 
   // Initialize the form
@@ -35,6 +37,8 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
     age: [''],
     country: [''],
     region: [''],
+    isAdmin: [''],
+    isPremium: ['']
   });
 
   ngOnInit() {}
@@ -48,6 +52,8 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
     this.ageHTML = this.ageHTML.nativeElement;
     this.countryHTML = this.countryHTML.nativeElement;
     this.regionHTML = this.regionHTML.nativeElement;
+    this.isAdminHTML = this.isAdminHTML.nativeElement;
+    this.isPremiumHTML = this.isPremiumHTML.nativeElement;
 
     // Update the form values
 
@@ -58,6 +64,8 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
       age: [user.age],
       country: [user.country],
       region: [user.region],
+      isAdmin: [user.isAdmin],
+      isPremium: [user.isPremium]
     });
 
     this.updateInputs();
@@ -76,17 +84,17 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
     this.ageHTML.value = user.age;
     this.countryHTML.value = user.country;
     this.regionHTML.value = user.region;
+    this.isAdminHTML.value = user.isAdmin;
+    this.isPremiumHTML.value = user.isPremium;
     this.id = user.id;
   }
 
   public sendData() {
 
     let user = this.editForm.value;
+    this.translationOfBoolean(user);
 
-    // Send a number instead of a string
-    if (user.age === '') {
-      user.age = -1;
-    }
+    console.log(user);
 
     // Don't request if not touched
     if (this.editForm.touched === false) {
@@ -95,5 +103,24 @@ export class AdminEditModalComponent implements OnInit, AfterViewInit {
     }
     document.location.reload();
     this.userService.modifyUser(this.id, user).subscribe(data => user = data);
+  }
+
+  private translationOfBoolean(user) {
+    if (user.age === '') {
+      user.age = -1;
+    }
+
+    if (user.isAdmin === 'false') {
+      user.isAdmin = 0;
+    } else if (user.isAdmin === 'true') {
+      user.isAdmin = 1;
+    }
+
+    if (user.isPremium === 'false') {
+      user.isPremium = 0;
+    } else if (user.isPremium === 'true') {
+      user.isPremium = 1;
+    }
+
   }
 }

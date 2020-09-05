@@ -28,6 +28,8 @@ export class AdminUserService {
     this.age = user.age;
     this.country = user.country;
     this.region = user.region;
+    this.isAdmin = user.isAdmin;
+    this.isPremium = user.isPremium;
   }
 
 
