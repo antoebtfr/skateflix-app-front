@@ -1,8 +1,9 @@
+import { User } from './../shared/class/user';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserConf {
-  private connected = true; // Variable managing the switch to connected / not connected mode of the site
+  private connected = false; // Variable managing the switch to connected / not connected mode of the site
 
   private userFirstname = 'Pierre';
   private userSurname = 'Croce';
@@ -27,18 +28,23 @@ export class UserConf {
   }
 
   public getUserInfo() {
-    const user = {
+    const user: User = {
       id: this.userId,
       firstname: this.userFirstname,
       surname: this.userSurname,
       nickname: this.userNickname,
       age: this.userAge,
-      location: this.userLocation,
-      nationality: this.userNationality,
+      region: this.userLocation,
+      country: this.userNationality,
       profilPicture: this.userProfilPicture,
       bio: this.userBio
     };
 
     return user;
+  }
+
+  public updateCurrentUser(user: User) {
+    this.userFirstname = user.firstname;
+    this.userSurname = user.surname;
   }
 }

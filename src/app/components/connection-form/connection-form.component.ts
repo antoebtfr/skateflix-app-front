@@ -1,3 +1,5 @@
+import { User } from 'src/app/shared/class/user';
+import { AuthService } from './../../shared/service/auth.service';
 import { UserConf } from 'src/app/variable-globale/user-conf';
 import { Component, OnInit } from '@angular/core';
 import { ModalConf } from 'src/app/variable-globale/modal-conf';
@@ -10,7 +12,12 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ConnectionFormComponent implements OnInit {
 
-  constructor(private modalConf: ModalConf, private fb: FormBuilder, private userConf: UserConf) { }
+  constructor(
+    private modalConf: ModalConf,
+    private fb: FormBuilder,
+    private userConf: UserConf,
+    private authService: AuthService
+    ) { }
 
   public connectionForm = this.fb.group({
     email : ['', [Validators.required, Validators.email]],
@@ -31,14 +38,23 @@ export class ConnectionFormComponent implements OnInit {
 
     if (this.connectionForm.valid) {
     console.log(this.connectionForm.value);
+    this.connection(this.connectionForm.value);
     this.connectionForm.reset();
     this.submitted = false;
-    this.connection();
     }
   }
 
-  public connection(){
-    this.userConf.connection();
+  public connection(user) {
+
+
+    this.authService.logIn(user).subscribe(data => {
+      console.log(data);
+      this.userConf.updateCurrentUser(data);
+      this.userConf.connection();
+    }, err => { throw new Error('something bad happened'); });
+
+
+
   }
 
 }
