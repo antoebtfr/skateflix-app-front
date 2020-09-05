@@ -28,7 +28,7 @@ export class UserConf {
   }
 
   public getUserInfo() {
-    const user: User = {
+    const user = {
       id: this.userId,
       firstname: this.userFirstname,
       surname: this.userSurname,
@@ -46,5 +46,6 @@ export class UserConf {
   public updateCurrentUser(user: User) {
     this.userFirstname = user.firstname;
     this.userSurname = user.surname;
+    this.userProfilPicture = user.profilPicture;
   }
 }

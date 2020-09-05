@@ -3,6 +3,7 @@ export class User {
     firstname: string;
     nickname?: string;
     email: string;
+    profilPicture: string;
     password: string;
     bio?: string;
     age?: number;
