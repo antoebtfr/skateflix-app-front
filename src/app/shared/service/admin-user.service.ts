@@ -53,4 +53,12 @@ export class AdminUserService {
     return user;
   }
 
+  public getConnectedStatus() {
+    return this.isConnected;
+  }
+
+  public connect(){
+    this.isConnected = true;
+  }
+
 }

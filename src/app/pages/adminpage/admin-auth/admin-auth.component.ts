@@ -1,3 +1,4 @@
+import { AdminUserService } from './../../../shared/service/admin-user.service';
 import { AuthService } from './../../../shared/service/auth.service';
 import { FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,8 @@ export class AdminAuthComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private adminService: AdminUserService
     ) { }
   public authForm = this.fb.group({
     email: [''],
@@ -28,7 +30,7 @@ export class AdminAuthComponent implements OnInit {
                         if (!data.isAdmin) {
                           throw new Error('wrong');
                         }
-                        console.log('good');
+                        this.adminService.connect();
                         this.router.navigateByUrl('/admin/dashboard');
   }, err => console.log('wrong'));
 

@@ -1,3 +1,4 @@
+import { AdminConnectedGuard } from './shared/guard/admin-connected.guard';
 import { AdminGuard } from './shared/guard/admin.guard';
 import { AuthGuard } from './shared/guard/auth.guard';
 import { UserListComponent } from './components/navbar/user-list/user-list.component';
