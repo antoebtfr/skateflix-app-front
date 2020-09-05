@@ -1,9 +1,11 @@
 export class Video {
     id?: number;
-    name: string;
+    videoname: string;
     link: string;
+    category: string;
+    userId: number;
 
-    constructor(input?){
+    constructor(input?) {
         Object.assign(input);
     }
 }

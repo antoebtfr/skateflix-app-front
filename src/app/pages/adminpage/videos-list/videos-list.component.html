@@ -1,1 +1,11 @@
-<p>videos-list works!</p>
+<app-admin-sidebar></app-admin-sidebar>
+
+<h2>Liste des vidéo</h2>
+
+<ul>
+<li *ngFor="let video of videoList">
+  {{video.id}} / {{video.videoname}} / {{video.category}}
+ <button> Modifier</button>
+ <button> X </button>
+</li>
+</ul>
