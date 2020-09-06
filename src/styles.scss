@@ -75,6 +75,18 @@ body{
     width: 10px;
   }
 
+.homepage-video{
+    min-width: 17vw;
+    height: 15vh;
+    background-color: rgb(31, 31, 31);
+    border:rgb(14, 14, 14) solid 5px;
+    border-radius: 4px;
+    padding: 3px;
+    margin: 0 20px;
+    color: white;
+    display: inline-block;
+}
+
 //   /* Track */
 //   ::-webkit-scrollbar-track {
 //   }

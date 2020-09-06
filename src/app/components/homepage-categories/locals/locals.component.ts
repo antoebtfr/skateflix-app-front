@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./locals.component.scss']
 })
 export class LocalsComponent implements OnInit {
-  public localVideos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  public localVideos = [];
   private location: string;
   constructor(private videoService: VideoService, private userConf: UserConf) { }
 

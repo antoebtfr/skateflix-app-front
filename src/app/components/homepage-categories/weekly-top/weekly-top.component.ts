@@ -1,3 +1,4 @@
+import { VideoService } from 'src/app/shared/service/video.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weekly-top.component.scss']
 })
 export class WeeklyTopComponent implements OnInit {
-  public weeklyVideos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  constructor() { }
+  public weeklyVideos = [];
+  constructor(
+    private videoService: VideoService
+  ) { }
 
   ngOnInit() {
+    this.videoService.get().subscribe(data => this.weeklyVideos = data);
   }
 
 }

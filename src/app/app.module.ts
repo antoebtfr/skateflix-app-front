@@ -19,6 +19,7 @@ import { DocumentaryComponent } from './components/homepage-categories/documenta
 import { LocalsComponent } from './components/homepage-categories/locals/locals.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { UserConf } from './variable-globale/user-conf';
+import { FunPartsComponent } from './components/homepage-categories/fun-parts/fun-parts.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UserConf } from './variable-globale/user-conf';
     DocumentaryComponent,
     LocalsComponent,
     CategoriesComponent,
+    FunPartsComponent,
     ],
   imports: [
     BrowserModule,

@@ -4,8 +4,13 @@
   </div>
   <hr>
   <div class="video-container">
-    <div *ngFor="let video of weeklyVideos" class="weekly-video">
-      {{ video }}
-    </div>
+      <video
+      *ngFor="let video of weeklyVideos"
+      class="homepage-video"
+      width="200"
+      height="80"
+    >
+      <source src="http://localhost:3000/{{ video.link }}" />
+    </video>
   </div>
 </section>
